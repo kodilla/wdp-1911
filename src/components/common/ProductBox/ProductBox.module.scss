@@ -75,4 +75,21 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .buttons {
+    visibility: hidden;
+  }
+
+  :hover .buttons {
+    visibility:visible;
+  }
+
+}
+
+.root:hover .buttons {
+    visibility:visible;
+}
+
+.root:hover .buttonPrice  {
+  background-color:$primary;
 }
