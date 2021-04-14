@@ -16,16 +16,16 @@ const ProductSearch = () => (
 
           <ul>
             <li>
-              <a href='#'>Lorum ipsum</a>
+              <a href='#'>Lorum ipsum1</a>
             </li>
             <li>
-              <a href='#'>Lorum ipsum</a>
+              <a href='#'>Lorum ipsum2</a>
             </li>
             <li>
-              <a href='#'>Lorum ipsum</a>
+              <a href='#'>Lorum ipsum3</a>
             </li>
             <li>
-              <a href='#'>Lorum ipsum</a>
+              <a href='#'>Lorum ipsum4</a>
             </li>
           </ul>
         </li>
