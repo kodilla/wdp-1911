@@ -80,16 +80,12 @@
     visibility: hidden;
   }
 
-  :hover .buttons {
+  &:hover .buttons {
     visibility:visible;
   }
 
-}
+  &:hover .buttonPrice  {
+    background-color:$primary;
+  }
 
-.root:hover .buttons {
-    visibility:visible;
-}
-
-.root:hover .buttonPrice  {
-  background-color:$primary;
 }
