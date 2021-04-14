@@ -30,7 +30,11 @@
         background: none;
       }
       &:hover {
+        option {
+          color: $text-color;
+        }
         text-decoration: underline;
+        color: $primary;
       }
       -webkit-appearance: none;
       border: 0;
