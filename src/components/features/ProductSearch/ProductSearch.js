@@ -19,13 +19,13 @@ const ProductSearch = () => (
               <a href='#'>Lorum ipsum</a>
             </li>
             <li>
-              <a href='#'>Lorum ipsum2</a>
+              <a href='#'>Lorum ipsum</a>
             </li>
             <li>
-              <a href='#'>Lorum ipsum3</a>
+              <a href='#'>Lorum ipsum</a>
             </li>
             <li>
-              <a href='#'>Lorum ipsum4</a>
+              <a href='#'>Lorum ipsum</a>
             </li>
           </ul>
         </li>
