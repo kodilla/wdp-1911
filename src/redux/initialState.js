@@ -277,6 +277,9 @@ const initialState = {
   cart: {
     products: [],
   },
+  favourites: {
+    'aenean-ru-bristique-3': 'aenean-ru-bristique-3',
+  },
 };
 
 export default initialState;
