@@ -4,30 +4,25 @@
   border: 1px solid $root-border-color;
   text-align: center;
   margin-top: 40px;
-  
-  ul {
-    margin: 0;
-    padding: 0;
 
-    li {
-      list-style: none;
-      align-items: stretch;
+  .paragraph {
+    transition: 1s;
+  }
 
-      &:hover {
+  a:hover {
+    font-size: 25px;
 
-        .iconWrapper {
-          color: $color-light-primary;
-    
-          &::after {
-            background-color: $primary;
-            border-color: $primary;
-          }
-        }
-        
-        .content {
-          color: $primary;
-        }
+    .iconWrapper {
+      color: $color-light-primary;
+
+      &::after {
+        background-color: $primary;
+        border-color: $primary;
       }
+    }
+
+    .content {
+      color: $primary;
     }
   }
 
