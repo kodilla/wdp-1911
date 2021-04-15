@@ -15,10 +15,14 @@
       a {
         color: #ffffff;
         font-size: 13px;
+        background: $background-text-hover;
+        background-size: $background-size-hover;
+        transition: $transition-hover;
 
         &:hover {
           color: $primary;
           text-decoration: none;
+          background-position: 0 100%;
         }
       }
     }
