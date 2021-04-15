@@ -12,7 +12,7 @@
       margin: 0;
       font-size: 17px;
       line-height: 42px;
-      color: rgb(216, 216, 216);
+      color: $phone-paragraph-color;
       font-weight: 500;
 
       .icon {
@@ -29,7 +29,7 @@
     .cartBox {
       display: inline-block;
       position: relative;
-      color: #ffffff;
+      color: $color-light-primary;
 
       .cartIcon {
         background-color: $primary;
@@ -49,13 +49,14 @@
       .cartCounter {
         width: 28px;
         height: 27px;
+        padding-left: 10px;
         border-radius: 14px;
         background-color: $header-bg;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         font-size: 14px;
-        color: rgb(224, 227, 237);
+        color: $cardcounter-color;
         position: absolute;
         top: 50%;
         right: 0;
