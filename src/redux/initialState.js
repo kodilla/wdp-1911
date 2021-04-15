@@ -30,6 +30,8 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      like: true,
+      compare: false,
       photoBackground:
         'https://lectus24.pl/96216-large_default/biurko-z-szufladami-raflo-biale-mat.jpg',
     },
@@ -42,6 +44,8 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      like: false,
+      compare: true,
       photoBackground:
         'https://www.meblezagrosze.pl/upload/l650/szafka-rtv-sewt142-m115-colonial-oak-black-colonial-oak-sewill-1.jpg',
     },
