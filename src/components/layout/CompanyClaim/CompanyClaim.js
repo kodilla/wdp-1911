@@ -30,14 +30,6 @@ const CompanyClaim = () => (
           </a>
         </div>
       </div>
-      <div className={styles.bannerMobileRow}>
-        <div className={`col ${styles.phoneNumber}`}>
-          <p>
-            <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560 -
-            222
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 );

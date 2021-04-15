@@ -90,15 +90,9 @@
         order: 2;
       }
       .phoneNumber {
-        display: none;
-      }
-    }
-    .bannerMobileRow{
-      max-height: 36px;
-      margin-top: -56px;
-      display: block;
-      text-align: right;
-      .phoneNumber {
+        order: 3;
+        flex-basis: 100%;
+        text-align: right;
         padding-right: 0;
         .icon{
           font-size: 14px;
