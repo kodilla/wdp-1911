@@ -11,7 +11,16 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars, photoBackground, oldPrice }) => (
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  photoBackground,
+  oldPrice,
+  like,
+  compare,
+}) => (
   <div className={styles.root}>
     <div
       className={styles.photo}
@@ -44,12 +53,33 @@ const ProductBox = ({ name, price, promo, stars, photoBackground, oldPrice }) =>
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-        </Button>
+        {like && (
+          <Button variant='outline'>
+            <FontAwesomeIcon icon={faHeart} className={styles.like}>
+              Favorite
+            </FontAwesomeIcon>
+          </Button>
+        )}
+
+        {!like && (
+          <Button variant='outline'>
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          </Button>
+        )}
+
+        {compare && (
+          <Button variant='outline'>
+            <FontAwesomeIcon icon={faExchangeAlt} className={styles.compare}>
+              Add to compare
+            </FontAwesomeIcon>
+          </Button>
+        )}
+
+        {!compare && (
+          <Button variant='outline'>
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+          </Button>
+        )}
       </div>
       <div className={styles.price}>
         <Button noHover variant='small' className={styles.buttonPrice}>
@@ -75,6 +105,8 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   photoBackground: PropTypes.string,
+  like: PropTypes.bool,
+  compare: PropTypes.bool,
 };
 
 export default ProductBox;
