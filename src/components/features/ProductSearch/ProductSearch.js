@@ -10,7 +10,7 @@ const ProductSearch = () => (
   <form action='' className={styles.root}>
     <div className={styles.category}>
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
-      <ol>
+      <ul>
         <li>
           <a href='#'>Select a category</a>
 
@@ -29,7 +29,7 @@ const ProductSearch = () => (
             </li>
           </ul>
         </li>
-      </ol>
+      </ul>
       <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
     </div>
     <div className={styles.searchField}>
