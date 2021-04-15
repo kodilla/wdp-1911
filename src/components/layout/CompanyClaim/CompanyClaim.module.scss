@@ -70,4 +70,41 @@
       }
     }
   }
+  .bannerRow{
+    align-items: center;
+  }
+
+  .bannerMobileRow{
+    display: none;
+  }
+
+  @media (max-width: 768px){
+    .bannerRow{
+      align-items: flex-start;
+
+      .logo{
+        order: 1;
+        padding-top: 1em;
+      }
+      .cart{
+        order: 2;
+        padding-top: 1em;
+      }
+      .phoneNumber {
+        order: 3;
+        flex-basis: 100%;
+        text-align: right;
+        padding-right: 0.75em;
+        .icon{
+          font-size: 14px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
+
+
+
