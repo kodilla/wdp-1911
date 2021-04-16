@@ -13,7 +13,7 @@
       line-height: 55px;
 
       a {
-        color: #ffffff;
+        color: $color-light-primary;
         font-size: 13px;
 
         &:hover {
@@ -38,5 +38,11 @@
     .icon {
       margin-right: 5px;
     }
+  }
+}
+
+@media (max-width: 768px){
+  .topMenu a span {
+    display: none;
   }
 }
