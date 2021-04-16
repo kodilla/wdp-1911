@@ -5,13 +5,13 @@
   display: inline-flex;
   height: 45px;
   color: $text-color;
-
+ 
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
-
+    
     .icon:first-child {
       color: $primary;
       position: absolute;
@@ -111,14 +111,9 @@
 
     input {
       border: 0;
-      padding-left: 10px;
-      font-size: 14px;
       outline: none;
-
-      &::placeholder {
-        color: $text-color;
-      }
     }
+  }
 
     button {
       border: 0;
@@ -126,4 +121,4 @@
       outline: none;
     }
   }
-}
+
