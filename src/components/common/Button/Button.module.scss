@@ -5,16 +5,18 @@
 
 .main {
   background-color: #2a2a2a;
-  color: #ffffff;
+  // color: #ffffff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+  @extend %buttons-hover-before;
 
   &:not(.noHover):hover {
     color: #ffffff !important;
     background-color: $primary;
     text-decoration: none;
+    @extend %buttons-hover-after;
   }
 }
 
@@ -30,12 +32,13 @@
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  // color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
+  @extend %buttons-hover-before;
 
   &:not(.noHover):hover {
     background-color: #2a2a2a;
-    color: #ffffff;
+    @extend %buttons-hover-after;
   }
 }
