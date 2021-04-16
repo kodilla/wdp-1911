@@ -53,13 +53,15 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        {like && (
-          <Button variant='outline'>
+        <Button variant='outline'>
+          if (like){' '}
+          {
             <FontAwesomeIcon icon={faHeart} className={styles.like}>
               Favorite
             </FontAwesomeIcon>
-          </Button>
-        )}
+          }
+          else {<FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>}
+        </Button>
 
         {!like && (
           <Button variant='outline'>
