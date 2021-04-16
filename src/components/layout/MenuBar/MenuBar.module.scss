@@ -6,8 +6,13 @@
 
   :global(.container) > :global(.row) {
     height: 84px;
+    @media (max-width: 1024px){
+      height: 109px;
+    }
   }
-
+  .menuBarRow{
+    align-items: center;
+  }
   .menu {
     display: flex;
     align-self: stretch;
@@ -16,6 +21,9 @@
       margin: 0;
       padding: 0;
       display: flex;
+      .icon{
+        display: none;
+      }
 
       li {
         list-style: none;
@@ -48,4 +56,59 @@
       }
     }
   }
+  /*Tablets*/
+  @media (max-width: 1024px){
+    .menuBarSearch{
+      order: 2;
+    }
+    .menu{
+      order: 1;
+    }
+  }
+  /*Mobile*/
+  @media (max-width: 767px){
+    .menuBarRow{
+      flex-direction: row;
+    }
+    .menuBarSearch{
+      order: 1;
+      flex-basis: 50%;
+    }
+    .menu{
+      order: 2;
+      flex-basis: 30%;
+      align-items: center;
+      justify-content: flex-start;
+
+      position: relative;
+      ul{
+        .icon{
+          display: block;
+          width: 55px;
+          height: 50px;
+          border-radius: 3px;
+          display: block;
+
+        }
+        li{
+          display: none;
+        }
+        &:hover{
+          position: absolute;
+          top: 28px;
+          left: 16px;
+          display: flex;
+          flex-direction: column;
+          z-index: 10;
+
+          li{
+            display: block;
+            background-color: $light-grey-tertiary;
+          }
+        }
+
+      }
+    }
+  }
+
 }

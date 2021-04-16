@@ -69,4 +69,35 @@
       outline: none;
     }
   }
+
+  /*mobile*/
+  @media(max-width:767px){
+    .searchField{
+      order: 1
+    }
+    .category{
+      display: none;
+      /*
+      order: 2;
+      .icon:first-child {
+        color: $primary;
+        position: absolute;
+        left: 10px;
+        z-index: 0;
+
+      }
+      .icon:last-child {
+        display: none;
+      }
+
+      select {
+        display: none;
+      }
+      &:hover select{
+        display: block;
+
+      }
+*/
+    }
+  }
 }
