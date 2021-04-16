@@ -30,7 +30,11 @@
       padding:10px;
       margin:10px;
       text-align:center;
-      
+
+      &:hover li ul {
+        display: block;
+      }
+
       a {
         display:block;
         text-decoration:none;
@@ -50,16 +54,8 @@
           margin-left:0;
         }
 
-        &:hover {
-          background-color:#EEE;
-        }
-
         &:hover  a {
           color:$primary;
-        }
-
-        &:hover  ul {
-          display:block;
         }
 
         ul {
@@ -68,7 +64,7 @@
           padding:0;
           margin:0;
           position: absolute;
-      
+
           li {
             position:relative;
             background-color:#EEE;
@@ -77,18 +73,36 @@
               border-top:1px solid #FFF;
             }
 
-            &:hover {
-              background-color:#DDD;
-            }
-
             &:hover  a {
-              color:$primary;
+              color:#EEE;
+              background-color:$primary;
             }
           }
         }
       }
+
+    select {
+      option {
+        background: none;
+      }
+      &:hover {
+        option {
+          color: $text-color;
+        }
+        text-decoration: underline;
+        color: $primary;
+      }
+      -webkit-appearance: none;
+      border: 0;
+      font-size: 14px;
+      outline: none;
+      background-color: transparent;
+      padding: 5px 30px 5px 35px;
+      position: relative;
+      z-index: 1;
     }
   }
+}
 
   .searchField {
     display: flex;
@@ -97,14 +111,9 @@
 
     input {
       border: 0;
-      padding-left: 10px;
-      font-size: 14px;
       outline: none;
-
-      &::placeholder {
-        color: $text-color;
-      }
     }
+  }
 
     button {
       border: 0;
@@ -112,4 +121,4 @@
       outline: none;
     }
   }
-}
+
