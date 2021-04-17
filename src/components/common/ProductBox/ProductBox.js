@@ -54,29 +54,22 @@ const ProductBox = ({
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <div>
-          {isFavorite ? (
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faHeart} className={styles.isFavorite}>
-                Favorite
-              </FontAwesomeIcon>
-            </Button>
-          ) : (
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-            </Button>
-          )}
-
-          {compare ? (
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faExchangeAlt} className={styles.compare}>
-                Add to compare
-              </FontAwesomeIcon>
-            </Button>
-          ) : (
-            <Button variant='outline'>
-              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-            </Button>
-          )}
+          <Button variant='outline'>
+            <FontAwesomeIcon
+              icon={faHeart}
+              className={isFavorite ? styles.isFavorite : ''}
+            >
+              Favorite
+            </FontAwesomeIcon>
+          </Button>
+          <Button variant='outline'>
+            <FontAwesomeIcon
+              icon={faExchangeAlt}
+              className={compare ? styles.compare : ''}
+            >
+              Add to compare
+            </FontAwesomeIcon>
+          </Button>
         </div>
       </div>
 
