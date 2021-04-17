@@ -1,15 +1,14 @@
 import ProductBox from './ProductBox';
 import { connect } from 'react-redux';
 import { getAll } from '../../../redux/productsRedux';
-import { getFavourites, addFournitureToFavourite } from '../../../redux/favouriteRedux';
+import { addFavourite } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
   products: getAll(state),
-  favourites: getFavourites(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-  addFournitureToFavourite: id => dispatch(addFournitureToFavourite(id)),
+  addFavourite: payload => dispatch(addFavourite(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);

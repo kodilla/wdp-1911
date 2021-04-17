@@ -82,7 +82,7 @@ ProductBox.propTypes = {
   photoBackground: PropTypes.string,
   addFavourite: PropTypes.func,
   id: PropTypes.string,
-  isFavourite: PropTypes.any,
+  isFavourite: PropTypes.bool,
 };
 
 export default ProductBox;
