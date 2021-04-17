@@ -4,6 +4,16 @@
   border: 1px solid $root-border-color;
   text-align: center;
   margin-top: 40px;
+  transition: .8s;
+
+    &:hover {
+     background-color: 	#FFE4C4;
+
+     .iconWrapper {
+      transition: .8s;
+      font-size: 30px;
+     }
+    }
 
   .iconWrapper {
     height: 60px;

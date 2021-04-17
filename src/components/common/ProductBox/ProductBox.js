@@ -21,6 +21,7 @@ const ProductBox = ({
   isFavorite,
   compare,
 }) => (
+
   <div className={styles.root}>
     <div
       className={styles.photo}
