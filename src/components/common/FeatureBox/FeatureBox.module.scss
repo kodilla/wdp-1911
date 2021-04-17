@@ -4,27 +4,16 @@
   border: 1px solid $root-border-color;
   text-align: center;
   margin-top: 40px;
+  transition: .8s;
 
-  .paragraph {
-    transition: 1s;
-  }
+    &:hover {
+     background-color: 	#FFE4C4;
 
-  a:hover {
-    font-size: 25px;
-
-    .iconWrapper {
-      color: $color-light-primary;
-
-      &::after {
-        background-color: $primary;
-        border-color: $primary;
-      }
+     .iconWrapper {
+      transition: .8s;
+      font-size: 30px;
+     }
     }
-
-    .content {
-      color: $primary;
-    }
-  }
 
   .iconWrapper {
     height: 60px;
