@@ -18,7 +18,7 @@ const ProductBox = ({
   stars,
   photoBackground,
   oldPrice,
-  like,
+  isFavorite,
   compare,
 }) => (
   <div className={styles.root}>
@@ -53,36 +53,33 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          if (like){' '}
-          {
-            <FontAwesomeIcon icon={faHeart} className={styles.like}>
-              Favorite
-            </FontAwesomeIcon>
-          }
-          else {<FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>}
-        </Button>
+        <div>
+          {isFavorite ? (
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faHeart} className={styles.isFavorite}>
+                Favorite
+              </FontAwesomeIcon>
+            </Button>
+          ) : (
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+            </Button>
+          )}
 
-        {!like && (
-          <Button variant='outline'>
-            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-          </Button>
-        )}
-
-        {compare && (
-          <Button variant='outline'>
-            <FontAwesomeIcon icon={faExchangeAlt} className={styles.compare}>
-              Add to compare
-            </FontAwesomeIcon>
-          </Button>
-        )}
-
-        {!compare && (
-          <Button variant='outline'>
-            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-          </Button>
-        )}
+          {compare ? (
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faExchangeAlt} className={styles.compare}>
+                Add to compare
+              </FontAwesomeIcon>
+            </Button>
+          ) : (
+            <Button variant='outline'>
+              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+            </Button>
+          )}
+        </div>
       </div>
+
       <div className={styles.price}>
         <Button noHover variant='small' className={styles.buttonPrice}>
           $ {price}
@@ -107,7 +104,7 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   photoBackground: PropTypes.string,
-  like: PropTypes.bool,
+  isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
 };
 

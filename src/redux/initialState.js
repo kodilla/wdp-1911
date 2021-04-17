@@ -16,7 +16,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      like: true,
+      isFavorite: true,
       compare: true,
       photoBackground:
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
@@ -30,7 +30,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      like: true,
+      isFavorite: true,
       compare: false,
       photoBackground:
         'https://lectus24.pl/96216-large_default/biurko-z-szufladami-raflo-biale-mat.jpg',
@@ -44,7 +44,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      like: false,
+      isFavorite: false,
       compare: true,
       photoBackground:
         'https://www.meblezagrosze.pl/upload/l650/szafka-rtv-sewt142-m115-colonial-oak-black-colonial-oak-sewill-1.jpg',
