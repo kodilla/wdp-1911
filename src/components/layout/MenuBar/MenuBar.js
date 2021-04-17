@@ -15,8 +15,8 @@ const MenuBar = ({ children }) => (
           <ProductSearch />
         </div>
         <div className={'col-auto ' + styles.menu}>
+          <FontAwesomeIcon className={styles.icon} icon={faBars} />
           <ul>
-            <FontAwesomeIcon className={styles.icon} icon={faBars} />
             <li>
               <a href='#' className={styles.active}>
                 Home
