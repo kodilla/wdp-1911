@@ -73,6 +73,9 @@ class NewFurniture extends React.Component {
               </div>
             ))}
           </div>
+          <div className='row'>
+            <h1>Sticky Bar here</h1>
+          </div>
         </div>
       </div>
     );
