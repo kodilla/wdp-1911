@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Slider from './../../common/Slider/Slider';
+import Swipeable from './../../common/Swipeable/Swipeable';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 
 class NewFurniture extends React.Component {
+  leftAction = this.changePagePrev.bind(this);
+  rightAction = this.changePageNext.bind(this);
   state = {
     activePage: 0,
     activeCategory: 'bed',
@@ -17,6 +19,27 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  changePagePrev() {
+    let currentPage = this.state.activePage;
+    const { products } = this.props;
+    const { activeCategory } = this.state;
+
+    const categoryProducts = products.filter(item => item.category === activeCategory);
+    const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    if (currentPage < pagesCount - 1) {
+      this.setState({ activePage: currentPage + 1 });
+    }
+  }
+
+  changePageNext() {
+    let currentPage = this.state.activePage;
+
+    if (currentPage !== 0) {
+      this.setState({ activePage: currentPage - 1 });
+    }
   }
 
   render() {
@@ -41,7 +64,7 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <Slider /*leftAction={}*/>
+      <Swipeable leftAction={this.leftAction} rightAction={this.rightAction}>
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
@@ -79,7 +102,7 @@ class NewFurniture extends React.Component {
             </div>
           </div>
         </div>
-      </Slider>
+      </Swipeable>
     );
   }
 }
