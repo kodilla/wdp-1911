@@ -5,15 +5,15 @@ import PropTypes from 'prop-types';
 import styles from './Swipeable.module.scss';
 
 class Swipeable extends React.Component {
-  SwipeStart = this.SwipeStart.bind(this);
-  SwipeEnd = this.SwipeEnd.bind(this);
+  swipeStart = this.swipeStart.bind(this);
+  swipeEnd = this.swipeEnd.bind(this);
   actionSwipe = this.actionSwipe.bind(this);
   state = {
     start: 0,
     end: 0,
   };
 
-  SwipeEnd(event) {
+  swipeEnd(event) {
     const { end } = this.state;
     let xEnd = event.touches[0].clientX;
 
@@ -22,7 +22,7 @@ class Swipeable extends React.Component {
     }
   }
 
-  SwipeStart(event) {
+  swipeStart(event) {
     const { start } = this.state;
     const xStart = event.touches[0].clientX;
 
@@ -49,8 +49,8 @@ class Swipeable extends React.Component {
     return (
       <div
         className={styles.component}
-        onTouchStart={this.SwipeStart}
-        onTouchMove={this.SwipeEnd}
+        onTouchStart={this.swipeStart}
+        onTouchMove={this.swipeEnd}
         onTouchEnd={this.actionSwipe(this.props.leftAction, this.props.rightAction)}
       >
         {this.props.children}
@@ -60,8 +60,8 @@ class Swipeable extends React.Component {
 }
 
 Swipeable.propTypes = {
-  leftAction: PropTypes.func,
-  rightAction: PropTypes.func,
+  leftAction: PropTypes.func.isRequired,
+  rightAction: PropTypes.func.isRequired,
   children: PropTypes.any,
 };
 

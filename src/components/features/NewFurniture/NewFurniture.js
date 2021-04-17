@@ -30,7 +30,7 @@ class NewFurniture extends React.Component {
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     if (currentPage < pagesCount - 1) {
-      this.setState({ activePage: currentPage + 1 });
+      this.handlePageChange(currentPage + 1);
     }
   }
 
@@ -38,7 +38,7 @@ class NewFurniture extends React.Component {
     let currentPage = this.state.activePage;
 
     if (currentPage !== 0) {
-      this.setState({ activePage: currentPage - 1 });
+      this.handlePageChange(currentPage - 1);
     }
   }
 
