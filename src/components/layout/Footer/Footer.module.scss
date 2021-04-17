@@ -21,14 +21,12 @@
             font-size: 14px;
             line-height: 30px;
             color: rgb(169, 169, 169);
-            background: $background-text-hover;
-            background-size: $background-size-hover;
-            transition: $transition-hover;    
+            @extend %text-hover-before;    
 
             &:hover {
-              color: $primary;
+              // color: $primary;
               text-decoration: none;
-              background-position: 0 100%;
+              @extend %text-hover-after;
             }
           }
         }
@@ -75,14 +73,12 @@
           a {
             color: rgb(169, 169, 169);
             text-decoration: none;
-            background: $background-text-hover;
-            background-size: $background-size-hover;
-            transition: $transition-hover;
+            @extend %text-hover-before;
 
             &:hover {
-              color: $primary;
+              // color: $primary;
               text-decoration: none;
-              background-position: 0 100%;
+              @extend %text-hover-after;
             }
           }
         }

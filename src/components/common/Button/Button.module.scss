@@ -4,21 +4,18 @@
 // }
 
 .main {
-  color: #ffffff;
+  // color: #ffffff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
-  background: $background-hover;
-  background-size: $background-size-hover;
-  transition: $transition-hover;
-  background-color: #2a2a2a;
+  @extend %button-hover-before;
+  // background-color: #2a2a2a;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
+    // color: #ffffff !important;
     // background-color: $primary;
-    text-decoration: none;
-    background-position: 0;
+    @extend %button-hover-after;
   }
 }
 
@@ -34,17 +31,14 @@
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  // color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
-  background: $background-hover;
-  background-size: $background-size-hover;
-  transition: $transition-hover;
-
+  @extend %button-hover-before;
 
   &:not(.noHover):hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    background-position: 0;
+    // background-color: #2a2a2a;
+    // color: #ffffff;
+    @extend %button-hover-after;
   }
 }

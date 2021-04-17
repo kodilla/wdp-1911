@@ -12,10 +12,29 @@ $text-color: #2a2a2a;
 
 $form-border-color: #292929;
 
-$background-hover: linear-gradient(45deg, $primary 50%, transparent 50%) 100%;
+%button-hover-before {
+  background-image: linear-gradient(45deg, $primary 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  background-color: #2a2a2a;
+  transition: 250ms ease-in-out, color 250ms ease-in-out;
+  color: $primary;
+}
 
-$background-text-hover: linear-gradient(to bottom, transparent 50%) 0% 0%;
+%button-hover-after {
+  background-position: 0%;
+  color: #fff;
+}
 
-$background-size-hover: 400%;
+%text-hover-before {
+  background-image: linear-gradient(to bottom, transparent 50%);
+  background-position: 0% 0%;
+  background-size: 400%;
+  transition: 250ms ease-in-out, color 250ms ease-in-out;
+  color: $primary;
+}
 
-$transition-hover: 250ms ease-in-out, color 250ms ease-in-out;
+%text-hover-after {
+  background-position: 0% 100%;
+  color: $primary;
+}
