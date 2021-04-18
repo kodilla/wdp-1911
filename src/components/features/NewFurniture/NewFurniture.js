@@ -85,20 +85,20 @@ class NewFurniture extends React.Component {
                     ))}
                   </ul>
                 </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
-                <ProductBox {...item} addFavourite={addFavourite} />
-              </div>
-            ))}
+            <div className='row'>
+              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+                <div key={item.id} className='col-3'>
+                  <ProductBox {...item} addFavourite={addFavourite} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
       </Swipeable>
     );
   }
