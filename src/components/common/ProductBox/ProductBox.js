@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faStar,
+  // faStar,
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
+// eslint-disable-next-line no-unused-vars
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import StarRating from '../StarRating/StarRating';
 
 const ProductBox = ({
   name,
@@ -20,8 +22,8 @@ const ProductBox = ({
   oldPrice,
   isFavorite,
   compare,
+  myRating,
 }) => (
-
   <div className={styles.root}>
     <div
       className={styles.photo}
@@ -40,7 +42,7 @@ const ProductBox = ({
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
+        {/* {[1, 2, 3, 4, 5].map(i => (
           <a key={i} href='#'>
             {i <= stars ? (
               <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
@@ -48,7 +50,8 @@ const ProductBox = ({
               <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
             )}
           </a>
-        ))}
+        ))} */}
+        <StarRating myRating={myRating} stars={stars} />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -100,6 +103,7 @@ ProductBox.propTypes = {
   photoBackground: PropTypes.string,
   isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
+  myRating: PropTypes.any,
 };
 
 export default ProductBox;

@@ -1,0 +1,17 @@
+@import "../../../styles/settings.scss";
+
+.starIcon {
+    size: 50px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.enter {
+    color: green;
+}
+
+.leave {
+    color: hotpink;
+}
