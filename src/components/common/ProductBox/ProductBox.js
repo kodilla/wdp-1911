@@ -15,7 +15,7 @@ import Button from '../Button/Button';
 const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   event.preventDefault();
   addFavourite({ id: id, isFavourite: !isFavourite });
-}
+};
 
 const ProductBox = ({
   name,
