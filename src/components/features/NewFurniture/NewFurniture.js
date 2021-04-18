@@ -43,7 +43,7 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, addFavourite } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -62,7 +62,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <Swipeable leftAction={this.leftAction} rightAction={this.rightAction}>
         <div className={styles.root}>
@@ -92,13 +91,11 @@ class NewFurniture extends React.Component {
               </div>
             </div>
             <div className='row'>
-              {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
-                .map(item => (
-                  <div key={item.id} className='col-3'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
+              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+                <div key={item.id} className='col-3'>
+                  <ProductBox {...item} addFavourite={addFavourite} />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -126,6 +123,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  addFavourite: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {
