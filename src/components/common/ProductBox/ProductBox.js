@@ -11,10 +11,11 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
+
 const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   event.preventDefault();
   addFavourite({ id: id, isFavourite: !isFavourite });
-};
+}
 
 const ProductBox = ({
   name,
@@ -85,6 +86,7 @@ const ProductBox = ({
           </Button>
         </div>
       </div>
+
       <div className={styles.price}>
         <Button noHover variant='small' className={styles.buttonPrice}>
           $ {price}
