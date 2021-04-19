@@ -3,15 +3,13 @@
 .starIcon {
     size: 50px;
 }
+.starIcon:hover {
+    z-index: 2;
+    size: 50px;
+}
 
 input[type="radio"] {
     display: none;
+    cursor: pointer;
 }
 
-.enter {
-    color: green;
-}
-
-.leave {
-    color: hotpink;
-}

@@ -31,6 +31,7 @@ const ProductBox = ({
   isFavorite,
   compare,
   myRating,
+  addRating,
 }) => (
   <div className={styles.root}>
     <div
@@ -59,7 +60,7 @@ const ProductBox = ({
             )}
           </a>
         ))} */}
-        <StarRating myRating={myRating} stars={stars} />
+        <StarRating myRating={myRating} stars={stars} addRating={addRating} id={id} />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -120,6 +121,7 @@ ProductBox.propTypes = {
   isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
   myRating: PropTypes.any,
+  addRating: PropTypes.func,
 };
 
 export default ProductBox;
