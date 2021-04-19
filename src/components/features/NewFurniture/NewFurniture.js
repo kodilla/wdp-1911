@@ -96,11 +96,7 @@ class NewFurniture extends React.Component {
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
                   <div key={item.id} className='col-3'>
-                    <ProductBox
-                      {...item}
-                      addFavourite={addFavourite}
-                      addCompare={addCompare}
-                    />
+                    <ProductBox {...item} addFavourite={addFavourite} />
                   </div>
                 ))}
             </div>
