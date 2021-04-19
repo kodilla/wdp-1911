@@ -100,7 +100,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div id='page' className={this.state.className}>
+            <div className={this.state.className}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (

@@ -100,12 +100,6 @@
   }
 }
 
-
-.fade {
-display: flex;
-flex-wrap: wrap;
-}
-
 .fadeStart {
   animation-name: fade-start;
   animation-duration: $transition;
