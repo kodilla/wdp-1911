@@ -4,11 +4,12 @@
   background-color: $color-light-primary;
   border: 1px solid $color-light-secondary;
   margin-bottom: 2rem;
-  height: 150px;
-  width: 150px;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 
   .photo {
-    position: relative;
+
     padding: 80% 10px 0 10px;
     background: {
       color: $color-light-tertiary;
@@ -16,9 +17,21 @@
       position: center;
       repeat: no-repeat;
     }
-    overflow: hidden;
-    align-items: flex-end;
+  }
+  .icon{
+    position: absolute;
+    top: calc((100% - 2em) / 2);
+    left: calc((100% - 2em) / 2);
+    height: 2em;
+    width: 2em;
+    color: $orange;
+    cursor: pointer;
+
+    visibility: hidden;
+
   }
 
-
+  &:hover .icon{
+    visibility: visible;
+  }
 }
