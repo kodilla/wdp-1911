@@ -4,7 +4,6 @@ import Swipeable from './../../common/Swipeable/Swipeable';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
-import ProductsCompare from '../ProductsCompare/ProductsCompareContainer';
 
 class NewFurniture extends React.Component {
   leftAction = this.changePagePrev.bind(this);
@@ -110,7 +109,6 @@ class NewFurniture extends React.Component {
                 ))}
             </div>
           </div>
-          <ProductsCompare />
         </div>
       </Swipeable>
     );

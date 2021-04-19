@@ -18,7 +18,7 @@ const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
 
 const addFurnitureToCompare = (id, compare, event, addCompare, inCompare) => {
   event.preventDefault();
-  if (inCompare <= 4) {
+  if (inCompare < 4) {
     addCompare({ id: id, compare: !compare });
   } else {
     addCompare({ id: id, compare: false });

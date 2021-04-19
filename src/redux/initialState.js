@@ -17,7 +17,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: true,
-      compare: true,
+      compare: false,
       photoBackground:
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
       isFavourite: true,
@@ -47,7 +47,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavorite: false,
-      compare: true,
+      compare: false,
       photoBackground:
         'https://www.meblezagrosze.pl/upload/l650/szafka-rtv-sewt142-m115-colonial-oak-black-colonial-oak-sewill-1.jpg',
       isFavourite: false,

@@ -5,6 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  bottom: 0;
+  min-width: 100%;
+  width: 100%;
+  background-color: white;
 
   .compareRow{
     align-items: center;
@@ -18,6 +23,17 @@
     font-size: 2em;
     &:hover{
       color: #FFE4C4;
+    }
+  }
+  @media (max-width: 767px){
+
+    padding: 0.5em 0;
+
+    .ProductToCompare{
+      padding: 0.25em;
+    }
+    .icon{
+      font-size: 1.5em;
     }
   }
 }

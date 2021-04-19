@@ -37,4 +37,17 @@
   &:hover .icon:hover{
     color: #FFE4C4;
   }
+  @media (max-width: 767px){
+    .root{
+      padding: calc($base-padding / 2) 0;
+    }
+
+    .ProductToCompare{
+      padding: 0.5em;
+    }
+
+    .icon{
+      font-size: 1em;
+    }
+  }
 }
