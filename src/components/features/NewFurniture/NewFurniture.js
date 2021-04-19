@@ -91,12 +91,17 @@ class NewFurniture extends React.Component {
               </div>
             </div>
             <div className='row'>
-              {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-                <div key={item.id} className='col-3'>
-                  <ProductBox {...item} addFavourite={addFavourite} />
-                </div>
-              ))}
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div key={item.id} className='col-3'>
+                    <ProductBox {...item} addFavourite={addFavourite} />
+                  </div>
+                ))}
             </div>
+          </div>
+          <div className='row'>
+            <h1>Sticky Bar here</h1>
           </div>
         </div>
       </Swipeable>

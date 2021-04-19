@@ -5,13 +5,13 @@
   display: inline-flex;
   height: 45px;
   color: $text-color;
- 
+
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
     align-items: center;
     position: relative;
-    
+
     .icon:first-child {
       color: $primary;
       position: absolute;
@@ -113,7 +113,6 @@
       border: 0;
       outline: none;
     }
-  }
 
     button {
       border: 0;
@@ -121,3 +120,14 @@
       outline: none;
     }
   }
+
+  /*mobile*/
+  @media(max-width:767px){
+    .searchField{
+      order: 1
+    }
+    .category{
+      display: none;
+    }
+  }
+}
