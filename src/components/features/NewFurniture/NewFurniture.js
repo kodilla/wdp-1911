@@ -43,7 +43,7 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, addFavourite, addRating } = this.props;
+    const { categories, products, addFavourite, addRating, addHover } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -99,6 +99,7 @@ class NewFurniture extends React.Component {
                       {...item}
                       addFavourite={addFavourite}
                       addRating={addRating}
+                      addHover={addHover}
                     />
                   </div>
                 ))}
@@ -134,6 +135,7 @@ NewFurniture.propTypes = {
   ),
   addFavourite: PropTypes.func,
   addRating: PropTypes.func,
+  addHover: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {

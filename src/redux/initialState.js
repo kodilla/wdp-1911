@@ -21,6 +21,7 @@ const initialState = {
       photoBackground:
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
       myRating: 3,
+      myHover: null,
       isFavourite: true,
     },
     {

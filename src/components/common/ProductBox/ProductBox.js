@@ -32,6 +32,8 @@ const ProductBox = ({
   compare,
   myRating,
   addRating,
+  addHover,
+  myHover,
 }) => (
   <div className={styles.root}>
     <div
@@ -60,7 +62,14 @@ const ProductBox = ({
             )}
           </a>
         ))} */}
-        <StarRating myRating={myRating} stars={stars} addRating={addRating} id={id} />
+        <StarRating
+          myRating={myRating}
+          stars={stars}
+          addRating={addRating}
+          id={id}
+          addHover={addHover}
+          myHover={myHover}
+        />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -122,6 +131,8 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   myRating: PropTypes.any,
   addRating: PropTypes.func,
+  addHover: PropTypes.func,
+  myHover: PropTypes.any,
 };
 
 export default ProductBox;

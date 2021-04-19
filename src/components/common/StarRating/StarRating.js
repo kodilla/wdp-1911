@@ -10,9 +10,14 @@ const addMyRatingToState = (id, addRating, value, myRating, event) => {
   addRating({ id: id, myRating: value });
 };
 
+const addHoverToState = (id, addHover, value, myHover, event) => {
+  event.preventDefault();
+  addHover({ id: id, myHover: value });
+};
+
 const starsArray = [1, 2, 3, 4, 5];
 
-const StarRating = ({ myRating, stars, addRating, id }) =>
+const StarRating = ({ myRating, stars, addRating, id, addHover, myHover }) =>
   myRating && myRating != null ? (
     <div className={styles.starRatio}>
       {starsArray.map(star => (
@@ -34,8 +39,19 @@ const StarRating = ({ myRating, stars, addRating, id }) =>
           <FontAwesomeIcon
             icon={faStar}
             className={styles.hoverEfect}
-            color={myRating < starsArray.indexOf(star) + 1 ? 'grey' : 'gold'}
-            onMouseEnter={() => console.log(starsArray.indexOf(star) + 1)}
+            onMouseEnter={event =>
+              addHoverToState(
+                id,
+                addHover,
+                starsArray.indexOf(star) + 1,
+                myHover,
+                event
+              )
+            }
+            onMouseLeave={event => addHoverToState(id, addHover, 0, myHover, event)}
+            color={
+              (myHover || myRating) < starsArray.indexOf(star) + 1 ? 'grey' : 'gold'
+            }
           ></FontAwesomeIcon>
         </label>
       ))}
@@ -84,6 +100,8 @@ StarRating.propTypes = {
   stars: PropTypes.number,
   addRating: PropTypes.func,
   id: PropTypes.string,
+  addHover: PropTypes.func,
+  myHover: PropTypes.any,
 };
 
 export default StarRating;
