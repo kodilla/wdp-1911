@@ -106,6 +106,16 @@
   flex-wrap: wrap;
 }
 
-.activePageAnimation {
-  display: none;
+.fade {
+
+}
+
+@keyframes fadeEnter {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes fadeLeave {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
