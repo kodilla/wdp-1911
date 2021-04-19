@@ -6,6 +6,16 @@
   margin-top: 40px;
   height: 70%;
 
+  transition: .8s;
+
+    &:hover {
+     background-color: 	#FFE4C4;
+
+     .iconWrapper {
+      transition: .8s;
+      font-size: 30px;
+     }
+    }
 
   .iconWrapper {
     height: 60px;
