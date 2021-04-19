@@ -12,10 +12,12 @@ class NewFurniture extends React.Component {
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
+    console.log('zmianaStrony', this.state.activePage);
   }
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+    console.log('zmianaKategarii');
   }
 
   render() {
@@ -66,7 +68,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className={styles.newFurnitureWrapper}>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-3'>
                 <ProductBox {...item} />

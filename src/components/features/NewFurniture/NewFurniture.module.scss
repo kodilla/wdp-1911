@@ -99,3 +99,13 @@
     }
   }
 }
+
+.newFurnitureWrapper {
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.activePageAnimation {
+  display: none;
+}
