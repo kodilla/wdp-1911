@@ -63,6 +63,10 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
+
+    //count compare elements
+    const inCompare = products.filter(item => item.compare).length;
+
     return (
       <Swipeable leftAction={this.leftAction} rightAction={this.rightAction}>
         <div className={styles.root}>
@@ -100,6 +104,7 @@ class NewFurniture extends React.Component {
                       {...item}
                       addFavourite={addFavourite}
                       addCompare={addCompare}
+                      inCompare={inCompare}
                     />
                   </div>
                 ))}

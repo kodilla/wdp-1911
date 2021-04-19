@@ -27,18 +27,9 @@ const ProductToCompare = ({ photoBackground, id, addCompare, compare }) => (
 );
 
 ProductToCompare.propTypes = {
-  children: PropTypes.node,
-  name: PropTypes.string,
-  price: PropTypes.number,
-  oldPrice: PropTypes.number,
-  promo: PropTypes.string,
-  stars: PropTypes.number,
   photoBackground: PropTypes.string,
-  addFavourite: PropTypes.func,
   addCompare: PropTypes.func,
   id: PropTypes.string,
-  isFavourite: PropTypes.bool,
-  isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
 };
 

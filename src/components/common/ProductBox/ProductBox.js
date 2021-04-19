@@ -16,9 +16,13 @@ const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   addFavourite({ id: id, isFavourite: !isFavourite });
 };
 
-const addFurnitureToCompare = (id, compare, event, addCompare) => {
+const addFurnitureToCompare = (id, compare, event, addCompare, inCompare) => {
   event.preventDefault();
-  addCompare({ id: id, compare: !compare });
+  if (inCompare <= 4) {
+    addCompare({ id: id, compare: !compare });
+  } else {
+    addCompare({ id: id, compare: false });
+  }
 };
 
 const ProductBox = ({
@@ -34,6 +38,7 @@ const ProductBox = ({
   isFavourite,
   isFavorite,
   compare,
+  inCompare,
 }) => (
   <div className={styles.root}>
     <div
@@ -83,7 +88,9 @@ const ProductBox = ({
           </Button>
           <Button
             variant={compare ? 'outlineCompare' : 'outline'}
-            onClick={event => addFurnitureToCompare(id, compare, event, addCompare)}
+            onClick={event =>
+              addFurnitureToCompare(id, compare, event, addCompare, inCompare)
+            }
           >
             <FontAwesomeIcon
               icon={faExchangeAlt}
@@ -125,6 +132,7 @@ ProductBox.propTypes = {
   isFavourite: PropTypes.bool,
   isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
+  inCompare: PropTypes.number,
 };
 
 export default ProductBox;
