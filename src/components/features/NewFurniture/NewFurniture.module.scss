@@ -28,7 +28,7 @@
         letter-spacing: 1px;
       }
     }
-
+  }
     .menu {
       text-align: center;
       ul {
@@ -95,8 +95,7 @@
         }
       }
     }
-  }
-  /*Tablets*/
+    /*Tablets*/
   @media (max-width: 1024px){
 
     .productsRow{
@@ -120,6 +119,14 @@
         padding-bottom: 0.5em;
         text-align: right;
         border-bottom: none;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          right: 0;
+          width: 100%;
+          border-bottom: 4px solid $primary;
+        }
       }
       .menu{
         padding-top: 1em;
@@ -139,4 +146,29 @@
       }
     }
   }
+}
+
+
+.fadeStart {
+  animation-name: fade-start;
+  animation-duration: $transition;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fadeEnd {
+  animation-name: fade-end;
+  animation-duration: $transition;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@keyframes fade-start {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes fade-end {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
