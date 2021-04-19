@@ -71,7 +71,7 @@ class NewFurniture extends React.Component {
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
-              <div className='row no-gutters align-items-end'>
+              <div className={`row no-gutters ${styles.menuPagesBar}`}>
                 <div className={'col-auto ' + styles.heading}>
                   <h3>New furniture</h3>
                 </div>
@@ -94,11 +94,11 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div className={`row ${styles.productsRow}`}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div key={item.id} className='col-3'>
+                  <div key={item.id} className={`col ${styles.product}`}>
                     <ProductBox
                       {...item}
                       addFavourite={addFavourite}
