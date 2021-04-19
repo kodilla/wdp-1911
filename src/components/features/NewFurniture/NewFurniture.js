@@ -62,7 +62,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <Swipeable leftAction={this.leftAction} rightAction={this.rightAction}>
         <div className={styles.root}>
@@ -100,6 +99,9 @@ class NewFurniture extends React.Component {
                   </div>
                 ))}
             </div>
+          </div>
+          <div className='row'>
+            <h1>Sticky Bar here</h1>
           </div>
         </div>
       </Swipeable>
