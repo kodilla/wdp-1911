@@ -11,7 +11,24 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars, photoBackground, oldPrice }) => (
+const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
+  event.preventDefault();
+  addFavourite({ id: id, isFavourite: !isFavourite });
+};
+
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  photoBackground,
+  oldPrice,
+  id,
+  addFavourite,
+  isFavourite,
+  isFavorite,
+  compare,
+}) => (
   <div className={styles.root}>
     <div
       className={styles.photo}
@@ -44,13 +61,31 @@ const ProductBox = ({ name, price, promo, stars, photoBackground, oldPrice }) =>
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
-        <Button variant='outline'>
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-        </Button>
+        <div>
+          <Button
+            variant={isFavourite ? 'outlineFavourites' : 'outline'}
+            onClick={event =>
+              addFurnitureToFavourite(id, isFavourite, event, addFavourite)
+            }
+          >
+            <FontAwesomeIcon
+              icon={faHeart}
+              className={isFavorite ? styles.isFavorite : ''}
+            >
+              Favorite
+            </FontAwesomeIcon>
+          </Button>
+          <Button variant='outline'>
+            <FontAwesomeIcon
+              icon={faExchangeAlt}
+              className={compare ? styles.compare : ''}
+            >
+              Add to compare
+            </FontAwesomeIcon>
+          </Button>
+        </div>
       </div>
+
       <div className={styles.price}>
         <Button noHover variant='small' className={styles.buttonPrice}>
           $ {price}
@@ -75,6 +110,11 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   photoBackground: PropTypes.string,
+  addFavourite: PropTypes.func,
+  id: PropTypes.string,
+  isFavourite: PropTypes.bool,
+  isFavorite: PropTypes.bool,
+  compare: PropTypes.bool,
 };
 
 export default ProductBox;
