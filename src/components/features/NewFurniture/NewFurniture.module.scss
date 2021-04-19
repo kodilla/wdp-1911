@@ -100,22 +100,32 @@
   }
 }
 
-.newFurnitureWrapper {
-  background: red;
+
+.fade {
+display: flex;
+flex-wrap: wrap;
+}
+
+.fadeStart {
+  animation-name: fade-start;
+  animation-duration: $transition;
   display: flex;
   flex-wrap: wrap;
 }
 
-.fade {
-
+.fadeEnd {
+  animation-name: fade-end;
+  animation-duration: $transition;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@keyframes fadeEnter {
+@keyframes fade-start {
   from {opacity: 1;}
   to {opacity: 0;}
 }
 
-@keyframes fadeLeave {
+@keyframes fade-end {
   from {opacity: 0;}
   to {opacity: 1;}
 }

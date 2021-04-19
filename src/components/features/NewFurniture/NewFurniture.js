@@ -11,15 +11,23 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    className: styles.fadeEnd,
   };
 
   handlePageChange(page) {
-    this.setState({ activePage: page });
+    this.setState({ className: `${styles.fadeStart}` });
+    setTimeout(() => {
+      this.setState({ activePage: page });
+      this.setState({ className: `${styles.fadeEnd}` });
+    }, 600);
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
-    console.log('zmianaKategarii');
+    this.setState({ className: `${styles.fadeStart}` });
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory });
+      this.setState({ className: `${styles.fadeEnd}` });
+    }, 600);
   }
 
   changePagePrev() {
@@ -31,7 +39,7 @@ class NewFurniture extends React.Component {
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     if (currentPage < pagesCount - 1) {
-      this.handlePageChange(currentPage + 1);
+      this.handlePageChange({ activePage: currentPage + 1 });
     }
   }
 
@@ -92,7 +100,7 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className='row'>
+            <div id='page' className={this.state.className}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
