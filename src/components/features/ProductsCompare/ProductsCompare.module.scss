@@ -1,0 +1,11 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  .ProductToCompare{
+    display: flex;
+    justify-content: center;
+  }
+}

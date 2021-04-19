@@ -1,0 +1,24 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $color-light-primary;
+  border: 1px solid $color-light-secondary;
+  margin-bottom: 2rem;
+  height: 150px;
+  width: 150px;
+
+  .photo {
+    position: relative;
+    padding: 80% 10px 0 10px;
+    background: {
+      color: $color-light-tertiary;
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    overflow: hidden;
+    align-items: flex-end;
+  }
+
+
+}

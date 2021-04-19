@@ -5,6 +5,9 @@ export const getCount = ({ products }) => products.length;
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
+export const getCompare = ({ products }) =>
+  products.filter(item => item.compare === true);
+
 /* function*/
 
 const addProductToFavourite = (state, action) => {
@@ -24,12 +27,12 @@ const addProductToCompare = (state, action) => {
   return state.map(currentStateElement => {
     if (currentStateElement.id !== action.payload.id) {
       return currentStateElement;
+    } else {
+      return {
+        ...currentStateElement,
+        compare: action.payload.compare,
+      };
     }
-
-    return {
-      ...currentStateElement,
-      compare: action.payload.compare,
-    };
   });
 };
 
@@ -52,6 +55,7 @@ export default function reducer(statePart = [], action = {}) {
       return addProductToFavourite(statePart, action);
     }
     case ADD_COMPARE: {
+      //czym jest action tutaj?
       return addProductToCompare(statePart, action);
     }
     default:
