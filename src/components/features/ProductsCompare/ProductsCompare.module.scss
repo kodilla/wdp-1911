@@ -1,11 +1,23 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding-top: 1em;
+  padding: $base-padding 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  .compareRow{
+    align-items: center;
+    justify-content: center;
+  }
   .ProductToCompare{
     display: flex;
     justify-content: center;
+  }
+  .icon{
+    font-size: 2em;
+    &:hover{
+      color: #FFE4C4;
+    }
   }
 }
