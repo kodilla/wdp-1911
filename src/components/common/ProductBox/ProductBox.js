@@ -18,14 +18,14 @@ const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
 
 const toggleCompare = (
   id,
-  compare,
+  isCompare,
   event,
   addCompare,
   removeCompare,
   canAddCompare
 ) => {
   event.preventDefault();
-  if (compare === false && canAddCompare) {
+  if (isCompare === false && canAddCompare) {
     addCompare(id);
   } else {
     removeCompare(id);

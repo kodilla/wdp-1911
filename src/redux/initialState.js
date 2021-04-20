@@ -332,7 +332,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       like: true,
-      compare: true,
+      compare: false,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ingolf-stolek-barowy-z-oparciem-bialy__0873775_pe595558_s5.jpg?f=xxs',
     },
@@ -601,7 +601,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       like: true,
-      compare: true,
+      compare: false,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/angsta-rozkladana-sofa-3-osobowa-z-szezlongiem-szary__1011692_pe828535_s5.jpg?f=xxs',
     },
@@ -870,7 +870,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       like: true,
-      compare: true,
+      compare: false,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/melltorp-stol-bialy__0870501_pe695865_s5.jpg?f=xxs',
     },
@@ -1139,7 +1139,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       like: true,
-      compare: true,
+      compare: false,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-lawka-brzoza__0682550_pe720526_s5.jpg?f=xxs',
     },
