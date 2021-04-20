@@ -52,7 +52,13 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, addFavourite, addCompare } = this.props;
+    const {
+      categories,
+      products,
+      addFavourite,
+      addCompare,
+      removeCompare,
+    } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -73,7 +79,7 @@ class NewFurniture extends React.Component {
     }
 
     //count compare elements
-    const inCompare = products.filter(item => item.compare).length;
+    const canAddCompare = products.filter(item => item.compare).length;
 
     return (
       <Swipeable leftAction={this.leftAction} rightAction={this.rightAction}>
@@ -112,7 +118,8 @@ class NewFurniture extends React.Component {
                       {...item}
                       addFavourite={addFavourite}
                       addCompare={addCompare}
-                      inCompare={inCompare}
+                      removeCompare={removeCompare}
+                      canAddCompare={canAddCompare < 4 ? true : false}
                     />
                   </div>
                 ))}
@@ -145,6 +152,7 @@ NewFurniture.propTypes = {
   ),
   addFavourite: PropTypes.func,
   addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {

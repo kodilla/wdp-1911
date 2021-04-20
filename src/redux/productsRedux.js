@@ -5,7 +5,7 @@ export const getCount = ({ products }) => products.length;
 export const getNew = ({ products }) =>
   products.filter(item => item.newFurniture === true);
 
-export const getCompare = ({ products }) =>
+export const getProductsToCompare = ({ products }) =>
   products.filter(item => item.compare === true);
 
 /* function*/
@@ -25,12 +25,25 @@ const addProductToFavourite = (state, action) => {
 
 const addProductToCompare = (state, action) => {
   return state.map(currentStateElement => {
-    if (currentStateElement.id !== action.payload.id) {
+    if (currentStateElement.id !== action.id) {
       return currentStateElement;
     } else {
       return {
         ...currentStateElement,
-        compare: action.payload.compare,
+        compare: true,
+      };
+    }
+  });
+};
+
+const removeProductFromCompare = (state, action) => {
+  return state.map(currentStateElement => {
+    if (currentStateElement.id !== action.id) {
+      return currentStateElement;
+    } else {
+      return {
+        ...currentStateElement,
+        compare: false,
       };
     }
   });
@@ -43,10 +56,12 @@ const createActionName = name => `app/${reducerName}/${name}`;
 /* action types */
 const ADD_FAVOURITE = createActionName('ADD_FAVOURITE');
 const ADD_COMPARE = createActionName('ADD_COMPARE');
+const REMOVE_COMPARE = createActionName('REMOVE_COMPARE');
 
 /* action creators */
 export const addFavourite = payload => ({ payload, type: ADD_FAVOURITE });
-export const addCompare = payload => ({ payload, type: ADD_COMPARE });
+export const addCompare = id => ({ id, type: ADD_COMPARE });
+export const removeCompare = id => ({ id, type: REMOVE_COMPARE });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -55,8 +70,10 @@ export default function reducer(statePart = [], action = {}) {
       return addProductToFavourite(statePart, action);
     }
     case ADD_COMPARE: {
-      //czym jest action tutaj?
       return addProductToCompare(statePart, action);
+    }
+    case REMOVE_COMPARE: {
+      return removeProductFromCompare(statePart, action);
     }
     default:
       return statePart;

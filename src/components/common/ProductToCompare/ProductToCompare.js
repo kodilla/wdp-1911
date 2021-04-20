@@ -7,12 +7,12 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../Button/Button';
 
-const addFurnitureToCompare = (id, compare, event, addCompare) => {
+const addFurnitureToCompare = (id, removeCompare, event) => {
   event.preventDefault();
-  addCompare({ id: id, compare: !compare });
+  removeCompare(id);
 };
 
-const ProductToCompare = ({ photoBackground, id, addCompare, compare }) => (
+const ProductToCompare = ({ photoBackground, id, removeCompare }) => (
   <div className={styles.root}>
     <div
       className={styles.photo}
@@ -20,7 +20,7 @@ const ProductToCompare = ({ photoBackground, id, addCompare, compare }) => (
         backgroundImage: `url(${photoBackground})`,
       }}
     ></div>
-    <Button onClick={event => addFurnitureToCompare(id, compare, event, addCompare)}>
+    <Button onClick={event => addFurnitureToCompare(id, removeCompare, event)}>
       <FontAwesomeIcon icon={faWindowClose} className={styles.icon}></FontAwesomeIcon>
     </Button>
   </div>
@@ -28,7 +28,7 @@ const ProductToCompare = ({ photoBackground, id, addCompare, compare }) => (
 
 ProductToCompare.propTypes = {
   photoBackground: PropTypes.string,
-  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
   id: PropTypes.string,
   compare: PropTypes.bool,
 };
