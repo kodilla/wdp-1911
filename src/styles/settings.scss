@@ -24,6 +24,7 @@ $form-border-color: #292929;
 %button-hover-after {
   background-position: 0%;
   color: #fff;
+  text-decoration: none;
 }
 
 %text-hover-before {
@@ -36,5 +37,24 @@ $form-border-color: #292929;
 
 %text-hover-after {
   background-position: 0% 100%;
-  color: $primary;
+  color:$primary;
+}
+
+//BREAKPOINTS
+@mixin breakpoint($point) {
+  @if $point == mobileonly {
+    @media (max-width: 320px) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 320px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 800px) { @content ; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1366px) { @content ; }
+  }
 }

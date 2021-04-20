@@ -4,12 +4,29 @@
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
+    @include breakpoint(mobileonly) {
+      width: 25%;
+    }
+    @include breakpoint(phablet){
+      width: 50%;
+      margin: 0;
+    }
+    @include breakpoint(tablet) {
+      width: 75%;
+    }
+    @include breakpoint(laptop) {
+      width: 100%;
+    }
 
     .menuWrapper {
       h6 {
         color: #ffffff;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
+        @include breakpoint(mobileonly) {
+          font-size: 10px;
+        }    
+      
       }
 
       ul {
@@ -22,7 +39,9 @@
             line-height: 30px;
             color: rgb(169, 169, 169);
             @extend %text-hover-before;    
-
+            @include breakpoint(mobileonly) {
+              font-size: 8px;
+            }              
             &:hover {
               // color: $primary;
               text-decoration: none;
@@ -43,24 +62,110 @@
       }
     }
   }
-
+   
   .bottomBar {
     background-color: $footer-claim-bg;
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(mobileonly) {
+      flex-direction: column;
+    }
+    @include breakpoint(phablet){
+      width: 50%;
+    }
+    @include breakpoint(tablet) {
+      width: 75%;
+    }
+    @include breakpoint(laptop) {
+      width: 100%;
+    }
 
     :global(.container) > :global(.row) {
       height: 95px;
     }
+    
+    .text {
+      @include breakpoint(mobileonly) {
+        flex-basis: 100%;
+        padding-left: 0;
+        color: #ffffff;
+        text-align: center !important;
+        font-size: 10px;
+      }
+      @include breakpoint(phablet){
+        flex-basis: 100%;
+        color: #ffffff;
+        text-align: center !important;
+        font-size: 10px;
+      }  
 
+      @include breakpoint(tablet) {
+        flex-basis: 100%;
+        text-align: center !important;
+        font-size: 10px;
+      } 
+      @include breakpoint(laptop) {
+        flex-basis: 33%;
+      }  
+      @include breakpoint(desktop) {
+        flex-basis: 33%;
+      }  
+    }
+    
     .copyright {
+      @include breakpoint(mobileonly) {
+        flex-basis: 100%;
+        padding-left: 0;
+      }
+      @include breakpoint(phablet){
+        flex-basis: 100%;
+      }  
+      @include breakpoint(tablet) {
+        flex-basis: 50%;
+      }
+      @include breakpoint(laptop) {
+        flex-basis: 33%;
+      }  
+      @include breakpoint(desktop) {
+        flex-basis: 33%;
+      }  
       p {
         margin: 0;
         color: rgb(169, 169, 169);
         font-size: 14px;
         line-height: 26px;
+        @include breakpoint(mobileonly) {
+          font-size: 8px;
+        }  
+        @include breakpoint(tablet) {
+          text-align: left;
+          font-size: 10px;
+        }
       }
     }
 
     .socialMedia {
+      @include breakpoint(mobileonly) {
+        flex-basis: 100%;
+        font-size: 8px;
+        text-align: center !important;
+        padding-left: 0;
+      } 
+      @include breakpoint(phablet){
+        flex-basis: 100%;
+        font-size: 10px;
+        text-align: center !important;
+        padding-left: 0;
+      }  
+      @include breakpoint(tablet) {
+        flex-basis: 50%;
+      }
+      @include breakpoint(laptop) {
+        flex-basis: 33%;
+      }  
+      @include breakpoint(desktop) {
+        flex-basis: 33%;
+      }  
       ul {
         margin: 0;
         padding: 0;
@@ -74,7 +179,10 @@
             color: rgb(169, 169, 169);
             text-decoration: none;
             @extend %text-hover-before;
-
+            @include breakpoint(tablet) {
+              font-size: 12px;
+            }
+    
             &:hover {
               // color: $primary;
               text-decoration: none;
