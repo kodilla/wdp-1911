@@ -32,7 +32,6 @@
       color: #ffffff;
 
       .cartIcon {
-        // background-color: $primary;
         width: 55px;
         height: 50px;
         border-radius: 3px;
@@ -40,10 +39,10 @@
         align-items: center;
         justify-content: center;
         font-size: 20px;
-        @extend %button-hover-before;
-  
+        @extend %buttons-hover-before;
+
         &:hover {
-          @extend %button-hover-after;
+          @extend %buttons-hover-after;
         }
 
         .icon {
@@ -65,13 +64,7 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
-
-      &:hover {
-        .cartIcon {
-          background-color: lighten($primary, 10%);
-        }
       }
     }
   }
-}
 }
