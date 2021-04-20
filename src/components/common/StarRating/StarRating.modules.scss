@@ -1,18 +1,14 @@
 @import "../../../styles/settings.scss";
 
-.starIcon {
-    size: 50px;
-}
-.starIcon:hover {
-    z-index: 2;
-    size: 50px;
-}
-
 input[type="radio"] {
     display: none;
     cursor: pointer;
 }
 
-svg {
-    cursor: pointer;
+  svg:hover {
+    color: blue !important ;
+}
+
+.FontColor {
+    color:gold;
 }
