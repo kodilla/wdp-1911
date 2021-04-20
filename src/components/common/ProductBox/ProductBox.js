@@ -32,8 +32,6 @@ const ProductBox = ({
   compare,
   myRating,
   addRating,
-  addHover,
-  myHover,
 }) => (
   <div className={styles.root}>
     <div
@@ -53,23 +51,7 @@ const ProductBox = ({
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        {/* {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))} */}
-        <StarRating
-          myRating={myRating}
-          stars={stars}
-          addRating={addRating}
-          id={id}
-          addHover={addHover}
-          myHover={myHover}
-        />
+        <StarRating myRating={myRating} stars={stars} addRating={addRating} id={id} />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -131,8 +113,6 @@ ProductBox.propTypes = {
   compare: PropTypes.bool,
   myRating: PropTypes.any,
   addRating: PropTypes.func,
-  addHover: PropTypes.func,
-  myHover: PropTypes.any,
 };
 
 export default ProductBox;

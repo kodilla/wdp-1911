@@ -9,12 +9,12 @@ const addMyRatingToState = (id, addRating, value, myRating, event) => {
   addRating({ id: id, myRating: value });
 };
 
-const colorSet = (rating, value, hoverRating, stars) => {
+const getColorSet = (rating, value, hoverRating, stars) => {
   if (hoverRating >= value) {
     return '#e6e29c';
   } else if (!hoverRating && rating >= value) {
     return '#e6e29c';
-  } else if (!rating && stars >= value) {
+  } else if (!hoverRating && !rating && stars >= value) {
     return '#000000';
   }
   return '#F2F2F2';
@@ -24,9 +24,7 @@ const starsArray = [1, 2, 3, 4, 5];
 
 const StarRating = ({ myRating, stars, addRating, id }) => {
   const [hoverRating, setHoverRating] = React.useState(0);
-  const setHover = star => {
-    setHoverRating(star);
-  };
+
   return (
     <div className={styles.starRatio}>
       {starsArray.map(star => (
@@ -39,10 +37,9 @@ const StarRating = ({ myRating, stars, addRating, id }) => {
           />
           <FontAwesomeIcon
             icon={faStar}
-            onMouseEnter={() => setHover(star)}
-            onMouseLeave={() => setHover(0)}
-            //className={colorSet(myRating, star, hoverRating)}
-            style={{ color: colorSet(myRating, star, hoverRating, stars) }}
+            onMouseEnter={() => setHoverRating(star)}
+            onMouseLeave={() => setHoverRating(0)}
+            style={{ color: getColorSet(myRating, star, hoverRating, stars) }}
           ></FontAwesomeIcon>
         </label>
       ))}

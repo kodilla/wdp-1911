@@ -32,18 +32,6 @@ const addMyRating = (state, action) => {
   });
 };
 
-const addMyHover = (state, action) => {
-  return state.map(currentStateElement => {
-    if (currentStateElement.id !== action.payload.id) {
-      return currentStateElement;
-    }
-    return {
-      ...currentStateElement,
-      myHover: action.payload.myHover,
-    };
-  });
-};
-
 /* action name creator */
 const reducerName = 'product';
 const createActionName = name => `app/${reducerName}/${name}`;
@@ -51,12 +39,10 @@ const createActionName = name => `app/${reducerName}/${name}`;
 /* action types */
 const ADD_FAVOURITE = createActionName('ADD_FAVOURITE');
 const ADD_RATING = createActionName('ADD_RATING');
-const ADD_HOVER = createActionName('ADD_HOVER');
 
 /* action creators */
 export const addFavourite = payload => ({ payload, type: ADD_FAVOURITE });
 export const addRating = payload => ({ payload, type: ADD_RATING });
-export const addHover = payload => ({ payload, type: ADD_HOVER });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
@@ -66,9 +52,6 @@ export default function reducer(statePart = [], action = {}) {
     }
     case ADD_RATING: {
       return addMyRating(statePart, action);
-    }
-    case ADD_HOVER: {
-      return addMyHover(statePart, action);
     }
     default:
       return statePart;
