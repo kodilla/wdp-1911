@@ -8,7 +8,7 @@ import ProductToCompare from '../../common/ProductToCompare/ProductToCompare';
 
 class ProductsCompare extends React.Component {
   render() {
-    const { compareProducts, addCompare } = this.props;
+    const { compareProducts, removeCompare } = this.props;
     if (compareProducts && compareProducts.length) {
       return (
         <div className={styles.root}>
@@ -16,7 +16,7 @@ class ProductsCompare extends React.Component {
             <div className={`row ${styles.compareRow}`}>
               {compareProducts.map(item => (
                 <div key={item.id} className={`col-2 ${styles.ProductToCompare}`}>
-                  <ProductToCompare {...item} addCompare={addCompare} />
+                  <ProductToCompare {...item} removeCompare={removeCompare} />
                 </div>
               ))}
               <div key={'compareBtn'} className={`col-2 ${styles.ProductToCompare}`}>
@@ -36,10 +36,9 @@ class ProductsCompare extends React.Component {
     }
   }
 }
-
 ProductsCompare.propTypes = {
   compareProducts: PropTypes.array,
-  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
 };
 
 export default ProductsCompare;

@@ -16,12 +16,19 @@ const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   addFavourite({ id: id, isFavourite: !isFavourite });
 };
 
-const addFurnitureToCompare = (id, compare, event, addCompare, inCompare) => {
+const toggleCompare = (
+  id,
+  compare,
+  event,
+  addCompare,
+  removeCompare,
+  canAddCompare
+) => {
   event.preventDefault();
-  if (inCompare < 4) {
-    addCompare({ id: id, compare: !compare });
+  if (compare === false && canAddCompare) {
+    addCompare(id);
   } else {
-    addCompare({ id: id, compare: false });
+    removeCompare(id);
   }
 };
 
@@ -35,10 +42,11 @@ const ProductBox = ({
   id,
   addFavourite,
   addCompare,
+  removeCompare,
   isFavourite,
   isFavorite,
   compare,
-  inCompare,
+  canAddCompare,
 }) => (
   <div className={styles.root}>
     <div
@@ -89,7 +97,14 @@ const ProductBox = ({
           <Button
             variant={compare ? 'outlineCompare' : 'outline'}
             onClick={event =>
-              addFurnitureToCompare(id, compare, event, addCompare, inCompare)
+              toggleCompare(
+                id,
+                compare,
+                event,
+                addCompare,
+                removeCompare,
+                canAddCompare
+              )
             }
           >
             <FontAwesomeIcon
@@ -128,11 +143,12 @@ ProductBox.propTypes = {
   photoBackground: PropTypes.string,
   addFavourite: PropTypes.func,
   addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
   id: PropTypes.string,
   isFavourite: PropTypes.bool,
   isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
-  inCompare: PropTypes.number,
+  canAddCompare: PropTypes.bool,
 };
 
 export default ProductBox;

@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 
 import ProductsCompare from './ProductsCompare';
 
-import { getCompare, addCompare } from '../../../redux/productsRedux';
+import { getProductsToCompare, removeCompare } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
-  compareProducts: getCompare(state),
+  compareProducts: getProductsToCompare(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-  addCompare: payload => dispatch(addCompare(payload)),
+  removeCompare: payload => dispatch(removeCompare(payload)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsCompare);
