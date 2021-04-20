@@ -1,6 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  position: relative;
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;

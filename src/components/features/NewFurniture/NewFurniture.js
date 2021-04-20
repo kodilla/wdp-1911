@@ -52,7 +52,13 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, addFavourite } = this.props;
+    const {
+      categories,
+      products,
+      addFavourite,
+      addCompare,
+      removeCompare,
+    } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -71,12 +77,16 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
+
+    //count compare elements
+    const canAddCompare = products.filter(item => item.compare).length;
+
     return (
       <Swipeable leftAction={this.leftAction} rightAction={this.rightAction}>
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
-              <div className='row no-gutters align-items-end'>
+              <div className={`row no-gutters ${styles.menuPagesBar}`}>
                 <div className={'col-auto ' + styles.heading}>
                   <h3>New furniture</h3>
                 </div>
@@ -99,18 +109,21 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
-            <div className={this.state.className}>
+            <div className={`row ${styles.productsRow} ${this.state.className}`}>
               {categoryProducts
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
-                  <div key={item.id} className='col-3'>
-                    <ProductBox {...item} addFavourite={addFavourite} />
+                  <div key={item.id} className={`col ${styles.product}`}>
+                    <ProductBox
+                      {...item}
+                      addFavourite={addFavourite}
+                      addCompare={addCompare}
+                      removeCompare={removeCompare}
+                      canAddCompare={canAddCompare < 4 ? true : false}
+                    />
                   </div>
                 ))}
             </div>
-          </div>
-          <div className='row'>
-            <h1>Sticky Bar here</h1>
           </div>
         </div>
       </Swipeable>
@@ -138,6 +151,8 @@ NewFurniture.propTypes = {
     })
   ),
   addFavourite: PropTypes.func,
+  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
 };
 
 NewFurniture.defaultProps = {

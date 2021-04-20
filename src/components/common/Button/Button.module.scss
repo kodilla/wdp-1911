@@ -50,3 +50,14 @@
   color: $color-light-primary;
 
 }
+
+.outlineCompare {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $text-color;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: $text-color;
+  color: $color-light-primary;
+
+}
