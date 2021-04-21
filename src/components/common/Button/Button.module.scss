@@ -4,7 +4,8 @@
 // }
 
 .main {
-  // color: #ffffff;
+  background-color: $footer-claim-bg;
+  color: $color-light-primary;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -30,8 +31,8 @@
 .outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  // color: #2a2a2a;
+  border: 1px solid $text-color;
+  color: $text-color;
   font-size: 13px;
   line-height: 22px;
   @extend %button-hover-before;
@@ -41,4 +42,26 @@
     // color: #ffffff;
     @extend %button-hover-after;
   }
+}
+
+.outlineFavourites {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $text-color;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: $text-color;
+  color: $color-light-primary;
+
+}
+
+.outlineCompare {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $text-color;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: $text-color;
+  color: $color-light-primary;
+
 }
