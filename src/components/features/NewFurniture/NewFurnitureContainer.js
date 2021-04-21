@@ -4,7 +4,8 @@ import NewFurniture from './NewFurniture';
 
 import { getAll } from '../../../redux/categoriesRedux.js';
 import { getNew } from '../../../redux/productsRedux.js';
-import { addFavourite, addCompare, removeCompare } from '../../../redux/productsRedux';
+
+import { addFavourite, addCompare, removeCompare, addRating } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
   categories: getAll(state),
@@ -13,6 +14,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addFavourite: payload => dispatch(addFavourite(payload)),
+  addRating: payload => dispatch(addRating(payload)),
   addCompare: payload => dispatch(addCompare(payload)),
   removeCompare: payload => dispatch(removeCompare(payload)),
 });

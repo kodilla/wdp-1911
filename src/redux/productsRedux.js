@@ -23,6 +23,19 @@ const addProductToFavourite = (state, action) => {
   });
 };
 
+
+const addMyRating = (state, action) => {
+  return state.map(currentStateElement => {
+    if (currentStateElement.id !== action.payload.id) {
+      return currentStateElement;
+    }
+    return {
+      ...currentStateElement,
+      myRating: action.payload.myRating,
+    };
+   });
+};
+
 const addProductToCompare = (state, action) => {
   return state.map(currentStateElement => {
     if (currentStateElement.id !== action.id) {
@@ -46,20 +59,22 @@ const removeProductFromCompare = (state, action) => {
         compare: false,
       };
     }
+
   });
 };
-
 /* action name creator */
 const reducerName = 'product';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 const ADD_FAVOURITE = createActionName('ADD_FAVOURITE');
+const ADD_RATING = createActionName('ADD_RATING');
 const ADD_COMPARE = createActionName('ADD_COMPARE');
 const REMOVE_COMPARE = createActionName('REMOVE_COMPARE');
 
 /* action creators */
 export const addFavourite = payload => ({ payload, type: ADD_FAVOURITE });
+export const addRating = payload => ({ payload, type: ADD_RATING });
 export const addCompare = id => ({ id, type: ADD_COMPARE });
 export const removeCompare = id => ({ id, type: REMOVE_COMPARE });
 
@@ -68,6 +83,9 @@ export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_FAVOURITE: {
       return addProductToFavourite(statePart, action);
+    }
+    case ADD_RATING: {
+      return addMyRating(statePart, action);
     }
     case ADD_COMPARE: {
       return addProductToCompare(statePart, action);

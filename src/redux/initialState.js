@@ -20,6 +20,7 @@ const initialState = {
       compare: false,
       photoBackground:
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
+      myRating: 3,
       isFavourite: true,
     },
     {
@@ -35,6 +36,7 @@ const initialState = {
       compare: false,
       photoBackground:
         'https://lectus24.pl/96216-large_default/biurko-z-szufladami-raflo-biale-mat.jpg',
+      myRating: null,
       isFavourite: false,
     },
     {
