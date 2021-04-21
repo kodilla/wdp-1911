@@ -33,6 +33,8 @@ const addMyRating = (state, action) => {
       ...currentStateElement,
       myRating: action.payload.myRating,
     };
+   });
+};
 
 const addProductToCompare = (state, action) => {
   return state.map(currentStateElement => {
