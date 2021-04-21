@@ -52,13 +52,7 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const {
-      categories,
-      products,
-      addFavourite,
-      addCompare,
-      removeCompare,
-    } = this.props;
+    const { categories, products, addFavourite, addRating, addCompare, removeCompare} = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -117,6 +111,7 @@ class NewFurniture extends React.Component {
                     <ProductBox
                       {...item}
                       addFavourite={addFavourite}
+                      addRating={addRating}
                       addCompare={addCompare}
                       removeCompare={removeCompare}
                       canAddCompare={canAddCompare < 4 ? true : false}
@@ -151,6 +146,7 @@ NewFurniture.propTypes = {
     })
   ),
   addFavourite: PropTypes.func,
+  addRating: PropTypes.func,
   addCompare: PropTypes.func,
   removeCompare: PropTypes.func,
 };
