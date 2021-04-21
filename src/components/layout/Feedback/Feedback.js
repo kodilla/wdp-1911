@@ -16,8 +16,8 @@ class Feedback extends React.Component {
 
   changePagePrev() {
     let currentPage = this.state.activePage;
-    const { Coments } = this.props;
-    const pagesCount = Math.ceil(Coments.length / 1);
+    const { comments } = this.props;
+    const pagesCount = Math.ceil(comments.length / 1);
 
     if (currentPage < pagesCount - 1) {
       this.handlePageChange(currentPage + 1);
@@ -33,38 +33,9 @@ class Feedback extends React.Component {
   }
 
   render() {
+    const { comments } = this.props;
     const { activePage } = this.state;
-
-    const Coments = [
-      {
-        id: 1,
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        profilePic:
-          'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-        name: 'Jan Kowalski',
-        client: 'Feuture client',
-      },
-      {
-        id: 2,
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        profilePic:
-          'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-        name: 'Anna Kowalska',
-        client: 'Feuture client',
-      },
-      {
-        id: 3,
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        profilePic:
-          'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        name: 'Jhon Smith',
-        client: 'Feuture client',
-      },
-    ];
-    const pagesCount = Math.ceil(Coments.length / 1);
+    const pagesCount = Math.ceil(comments.length / 1);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -95,7 +66,7 @@ class Feedback extends React.Component {
             </div>
             <p className={styles.apostrof}>&quot;</p>
 
-            {Coments.slice(activePage, activePage + 1).map(item => (
+            {comments.slice(activePage, activePage + 1).map(item => (
               <div key={item.id} className='container'>
                 <div className='row'>
                   <div className='col'>
@@ -122,7 +93,7 @@ class Feedback extends React.Component {
 }
 
 Feedback.propTypes = {
-  Coments: PropTypes.arrayOf(
+  comments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       text: PropTypes.string,
