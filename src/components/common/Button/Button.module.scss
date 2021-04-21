@@ -6,6 +6,8 @@
 .main {
   background-color: #2a2a2a;
   // color: #ffffff;
+  background-color: $footer-claim-bg;
+  color: $color-light-primary;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -13,7 +15,7 @@
   @extend %buttons-hover-before;
 
   &:not(.noHover):hover {
-    color: #ffffff !important;
+    color: $color-light-primary !important;
     background-color: $primary;
     text-decoration: none;
     @extend %buttons-hover-after;
@@ -33,6 +35,8 @@
   padding: 5px 10px;
   border: 1px solid #2a2a2a;
   // color: #2a2a2a;
+  border: 1px solid $text-color;
+  color: $text-color;
   font-size: 13px;
   line-height: 22px;
   @extend %buttons-hover-before;
@@ -40,5 +44,29 @@
   &:not(.noHover):hover {
     background-color: #2a2a2a;
     @extend %buttons-hover-after;
+    background-color: $text-color;
+    color: $color-light-primary;
   }
+}
+
+.outlineFavourites {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $text-color;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: $text-color;
+  color: $color-light-primary;
+
+}
+
+.outlineCompare {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $text-color;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: $text-color;
+  color: $color-light-primary;
+
 }
