@@ -27,17 +27,8 @@
         margin: 0;
         letter-spacing: 1px;
       }
-
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 45px;
-        border-bottom: 4px solid $primary;
-      }
     }
-
+  }
     .menu {
       text-align: center;
       ul {
@@ -104,8 +95,7 @@
         }
       }
     }
-  }
-   /*Tablets*/
+    /*Tablets*/
   @media (max-width: 1024px){
 
     .productsRow{
@@ -157,6 +147,7 @@
     }
   }
 }
+
 
 .fadeStart {
   animation-name: fade-start;
