@@ -61,6 +61,7 @@ $form-border-color: #292929;
   background-size: 400%;
   transition: 250ms ease-in-out, color 250ms ease-in-out;
   color: $primary;
+  text-decoration: none;
 }
 
 %text-hover-after {

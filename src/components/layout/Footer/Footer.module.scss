@@ -2,24 +2,34 @@
 
 .root {
   position: relative;
+  
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
-    @include breakpoint(mobileonly) {
-      width: 25%;
-    }
-    @include breakpoint(phablet){
-      width: 50%;
-      margin: 0;
-    }
-    @include breakpoint(tablet) {
-      width: 75%;
-    }
-    @include breakpoint(laptop) {
-      width: 100%;
+
+    :global(.row) > :global(.col) {
+      margin-left: 0;
+      @include breakpoint(mobileonly) {
+        flex-basis: 100%;
+        margin-left: 10px;
+      }
+      @include breakpoint(phablet){
+        flex-basis: 50%;
+      }  
+      @include breakpoint(tablet) {
+        flex-basis: 20%;
+      }
+      @include breakpoint(laptop) {
+        flex-basis: 20%;
+      }  
+      @include breakpoint(desktop) {
+        flex-basis: 25%;
+      }  
     }
 
+
     .menuWrapper {
+  
       h6 {
         color: $color-light-primary;
         text-transform: uppercase;
@@ -27,7 +37,9 @@
         @include breakpoint(mobileonly) {
           font-size: 10px;
         }    
-      
+        @include breakpoint(phablet){
+          font-size: 12px;
+        }    
       }
 
       ul {
@@ -41,11 +53,10 @@
             color: $list-element-text-color;
             @extend %text-hover-before;    
             @include breakpoint(mobileonly) {
-              font-size: 8px;
+              font-size: 10px;
             }              
+      
             &:hover {
-              // color: $primary;
-              text-decoration: none;
               @extend %text-hover-after;
             }
           }
@@ -68,18 +79,6 @@
     background-color: $footer-claim-bg;
     display: flex;
     flex-wrap: wrap;
-    @include breakpoint(mobileonly) {
-      flex-direction: column;
-    }
-    @include breakpoint(phablet){
-      width: 50%;
-    }
-    @include breakpoint(tablet) {
-      width: 75%;
-    }
-    @include breakpoint(laptop) {
-      width: 100%;
-    }
 
     :global(.container) > :global(.row) {
       height: 95px;
@@ -106,7 +105,7 @@
         font-size: 10px;
       } 
       @include breakpoint(laptop) {
-        flex-basis: 33%;
+        flex-basis: 30%;
       }  
       @include breakpoint(desktop) {
         flex-basis: 33%;
@@ -125,7 +124,7 @@
         flex-basis: 50%;
       }
       @include breakpoint(laptop) {
-        flex-basis: 33%;
+        flex-basis: 40%;
       }  
       @include breakpoint(desktop) {
         flex-basis: 33%;
@@ -162,7 +161,7 @@
         flex-basis: 50%;
       }
       @include breakpoint(laptop) {
-        flex-basis: 33%;
+        flex-basis: 30%;
       }  
       @include breakpoint(desktop) {
         flex-basis: 33%;
