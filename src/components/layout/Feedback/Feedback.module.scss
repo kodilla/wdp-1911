@@ -66,11 +66,17 @@
       }
     }
   }
-
+  .imageBox {
+    overflow: hidden;
+    height: 75px;
+  }
+  
   img {
-    width: 40px;
-    height: 60px;
+    width: 50px;
+    height: 100%;
+    text-align: center;
     float: right;
+    object-fit: fill;
   }
 
   .apostrof{

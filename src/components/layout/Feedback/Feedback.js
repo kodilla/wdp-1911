@@ -7,43 +7,43 @@ class Feedback extends React.Component {
   leftAction = this.changePagePrev.bind(this);
   rightAction = this.changePageNext.bind(this);
   state = {
-    activePage: 0,
+    activeComment: 0,
   };
 
-  handlePageChange(page) {
-    this.setState({ activePage: page });
+  handlePageChange(comment) {
+    this.setState({ activeComment: comment });
   }
 
   changePagePrev() {
-    let currentPage = this.state.activePage;
+    let currentComment = this.state.activeComment;
     const { comments } = this.props;
-    const pagesCount = Math.ceil(comments.length / 1);
+    const commentsCount = Math.ceil(comments.length / 1);
 
-    if (currentPage < pagesCount - 1) {
-      this.handlePageChange(currentPage + 1);
+    if (currentComment < commentsCount - 1) {
+      this.handlePageChange(currentComment + 1);
     }
   }
 
   changePageNext() {
-    let currentPage = this.state.activePage;
+    let currentComment = this.state.activePage;
 
-    if (currentPage !== 0) {
-      this.handlePageChange(currentPage - 1);
+    if (currentComment !== 0) {
+      this.handlePageChange(currentComment - 1);
     }
   }
 
   render() {
     const { comments } = this.props;
-    const { activePage } = this.state;
-    const pagesCount = Math.ceil(comments.length / 1);
+    const { activeComment } = this.state;
+    const commentsCount = Math.ceil(comments.length);
 
     const dots = [];
-    for (let i = 0; i < pagesCount; i++) {
+    for (let i = 0; i < commentsCount; i++) {
       dots.push(
         <li>
           <a
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activeComment && styles.active}
           >
             page {i}
           </a>
@@ -66,7 +66,7 @@ class Feedback extends React.Component {
             </div>
             <p className={styles.apostrof}>&quot;</p>
 
-            {comments.slice(activePage, activePage + 1).map(item => (
+            {comments.slice(activeComment, activeComment + 1).map(item => (
               <div key={item.id} className='container'>
                 <div className='row'>
                   <div className='col'>
@@ -74,7 +74,7 @@ class Feedback extends React.Component {
                   </div>
                 </div>
                 <div className='row'>
-                  <div className='col-6'>
+                  <div className={'col-6 ' + styles.imageBox}>
                     <img src={item.profilePic} />
                   </div>
                   <div className='col-6'>
