@@ -9,6 +9,7 @@ import PromoBox from '../../features/PromoBox/PromoBoxContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
+    <PromoBox />
     <FeatureBoxes />
     <NewFurniture />
   </div>

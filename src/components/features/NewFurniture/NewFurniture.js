@@ -27,6 +27,7 @@ class NewFurniture extends React.Component {
     setTimeout(() => {
       this.setState({ activeCategory: newCategory });
       this.setState({ className: `${styles.fadeEnd}` });
+      this.setState({ activePage: 0 }); //Zauważyłem że przy zmianie kategorii nie zeuje się strona a powinna więc poprawiłem to tutaj
     }, 600);
   }
 
@@ -52,7 +53,14 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, addFavourite, addRating, addCompare, removeCompare} = this.props;
+    const {
+      categories,
+      products,
+      addFavourite,
+      addRating,
+      addCompare,
+      removeCompare,
+    } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);

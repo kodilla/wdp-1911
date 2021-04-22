@@ -46,7 +46,6 @@ const ProductBox = ({
   addCompare,
   removeCompare,
   isFavourite,
-  isFavorite,
   compare,
   myRating,
   addRating,
@@ -85,9 +84,9 @@ const ProductBox = ({
           >
             <FontAwesomeIcon
               icon={faHeart}
-              className={isFavorite ? styles.isFavorite : ''}
+              className={isFavourite ? styles.isFavourite : ''}
             >
-              Favorite
+              Favourite
             </FontAwesomeIcon>
           </Button>
           <Button
@@ -130,7 +129,7 @@ const ProductBox = ({
 );
 
 ProductBox.propTypes = {
-  children: PropTypes.node,
+  //children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
   oldPrice: PropTypes.number,
@@ -142,7 +141,6 @@ ProductBox.propTypes = {
   removeCompare: PropTypes.func,
   id: PropTypes.string,
   isFavourite: PropTypes.bool,
-  isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
   myRating: PropTypes.any,
   addRating: PropTypes.func,
