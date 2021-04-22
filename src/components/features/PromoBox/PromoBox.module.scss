@@ -1,6 +1,5 @@
 @import "../../../styles/settings.scss";
 .wrapper {
-  margin: $base-padding 0;
   .promoTitle {
     .dots {
       ul {
@@ -36,6 +35,7 @@
     height: 50px;
     background: $form-border-color;
   }
+
   .heading {
     h3 {
       text-transform: uppercase;
@@ -44,5 +44,9 @@
       padding-left: 1rem;
     }
   }
+  display: flex;
+  flex-direction: row;
 }
+
+
 

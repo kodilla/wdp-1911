@@ -3,14 +3,11 @@ import { connect } from 'react-redux';
 import PromoBox from './PromoBox';
 
 import { getNew } from '../../../redux/productsRedux.js';
-import { addFavourite } from '../../../redux/productsRedux';
+import { getAll } from '../../../redux/promoImagesRedux.js';
 
 const mapStateToProps = state => ({
   products: getNew(state),
+  promoImages: getAll(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  addFavourite: payload => dispatch(addFavourite(payload)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(PromoBox);
+export default connect(mapStateToProps)(PromoBox);

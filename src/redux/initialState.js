@@ -1267,6 +1267,18 @@ const initialState = {
   cart: {
     products: [],
   },
+  promoImages: [
+    {
+      id: 'sofa',
+      photoUrl:
+        'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+    {
+      id: 'bed',
+      photoUrl:
+        'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+  ],
 };
 
 export default initialState;
