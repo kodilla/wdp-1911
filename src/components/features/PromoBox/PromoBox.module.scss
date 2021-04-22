@@ -1,5 +1,5 @@
 @import "../../../styles/settings.scss";
-.wrapper {
+
   .promoTitle {
     .dots {
       ul {
@@ -44,9 +44,14 @@
       padding-left: 1rem;
     }
   }
-  display: flex;
-  flex-direction: row;
+
+.root {
+  margin: $base-padding auto;
+  padding: 0;
 }
 
+.paddingZero {
+  padding: 0;
+}
 
 

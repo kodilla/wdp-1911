@@ -34,22 +34,31 @@ class PromoBox extends React.Component {
       );
     }
     return (
-      <div className='container'>
-        <div className={styles.wrapper}>
-          <div className={'col-4' + styles.boxPadding}>
-            <div className={styles.promoTitle}>
-              <div className={styles.heading}>
-                <h3>Hot Deals</h3>
+      <div className={styles.root}>
+        <div className='container'>
+          <div className='row'>
+            <div className={'col-' + styles.paddingZero}>
+              <div className={styles.promoTitle}>
+                <div className={styles.heading}>
+                  <h3>Hot Deals</h3>
+                </div>
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
-              </div>
+              {saleProducts.slice(activeProduct, activeProduct + 1).map(item => (
+                <div key={item.id}>
+                  <PromoProductBox {...item} />
+                </div>
+              ))}
             </div>
-            {saleProducts.slice(activeProduct, activeProduct + 1).map(item => (
-              <div key={item.id}>
-                <PromoProductBox {...item} />
-              </div>
-            ))}
+            <div className={'col-8' + styles.paddingZero}>
+              {promoImages.slice(activePromoImage, activePromoImage + 1).map(item => (
+                <div key={item.id}>
+                  <PromoImageBox {...item} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
