@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import Swipeable from './../../common/Swipeable/Swipeable';
 
 import styles from './NewFurniture.module.scss';
@@ -12,6 +12,12 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     className: styles.fadeEnd,
+  };
+
+  rwdCardsInRow = {
+    desktop: 8,
+    tablet: 3,
+    mobile: 1,
   };
 
   handlePageChange(page) {
@@ -32,11 +38,14 @@ class NewFurniture extends React.Component {
 
   changePagePrev() {
     let currentPage = this.state.activePage;
-    const { products } = this.props;
+    const { products, rwdMode } = this.props;
     const { activeCategory } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    const pagesCount = Math.ceil(
+      categoryProducts.length / this.rwdCardsInRow[rwdMode.mode]
+    );
 
     if (currentPage < pagesCount - 1) {
       this.handlePageChange(currentPage + 1);
@@ -52,11 +61,21 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, addFavourite, addRating, addCompare, removeCompare} = this.props;
+    const {
+      categories,
+      products,
+      addFavourite,
+      addRating,
+      addCompare,
+      removeCompare,
+      rwdMode,
+    } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(
+      categoryProducts.length / this.rwdCardsInRow[rwdMode.mode]
+    );
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -105,7 +124,10 @@ class NewFurniture extends React.Component {
             </div>
             <div className={`row ${styles.productsRow} ${this.state.className}`}>
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(
+                  activePage * this.rwdCardsInRow[rwdMode.mode],
+                  (activePage + 1) * this.rwdCardsInRow[rwdMode.mode]
+                )
                 .map(item => (
                   <div key={item.id} className={`col ${styles.product}`}>
                     <ProductBox
@@ -149,11 +171,13 @@ NewFurniture.propTypes = {
   addRating: PropTypes.func,
   addCompare: PropTypes.func,
   removeCompare: PropTypes.func,
+  rwdMode: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
   categories: [],
   products: [],
+  rwdMode: 'desktop',
 };
 
 export default NewFurniture;

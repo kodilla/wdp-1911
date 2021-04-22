@@ -1404,6 +1404,9 @@ const initialState = {
   cart: {
     products: [],
   },
+  config: {
+    rwdMode: 'dektop',
+  },
 };
 
 export default initialState;
