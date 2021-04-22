@@ -16,11 +16,10 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      isFavorite: true,
+      isFavourite: true,
       compare: true,
       photoBackground:
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
-      isFavourite: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -29,7 +28,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       isFavorite: true,
       compare: false,
@@ -44,9 +42,9 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       isFavorite: false,
+      onSale: true,
       compare: true,
       photoBackground:
         'https://www.meblezagrosze.pl/upload/l650/szafka-rtv-sewt142-m115-colonial-oak-black-colonial-oak-sewill-1.jpg',
@@ -58,7 +56,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground: 'https://www.mirjan24.pl/83016/komoda-nowoczesna-empire.jpg',
       isFavourite: false,
@@ -69,7 +66,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
+      onSale: true,
       newFurniture: true,
       photoBackground:
         'https://meblini.pl/userdata/public/gfx/23421/Stolik-kawowy-lawa-2w1-okragly-industrialny-w-stylu-loft-Dab-Craft-Zloty.jpg',
@@ -81,7 +78,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.strefasypialni.pl/userdata/public/gfx/5848/Lozko-Texas_90.jpg',
@@ -93,7 +89,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
+      onSale: true,
       newFurniture: true,
       photoBackground:
         'https://www.seart.pl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/i/witryna-industrial-2-seart-5.jpg',
@@ -105,7 +101,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground: 'https://birdmeble.pl/userdata/public/gfx/4474.jpg',
       isFavourite: false,
@@ -116,7 +111,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://a.allegroimg.com/original/038030/4e128be0469db48ff02ea169cb2a/PIKO-LAWA-STOLIK-KAWOWY-LOFT-RETRO-INDUSTRIALNY',
@@ -128,7 +122,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://meblowy.salon/userdata/public/gfx/3152/Rozkladana-sofa-Corner-z-podnozkiem-niebieska.jpg',
@@ -140,7 +133,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://3.allegroimg.com/s1024/0c7717/0cb014b14a218bcae20a9cad26d3',
@@ -152,7 +144,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea-club.org/cache/zoo_images/d/d8b2d6766a1f0a7c43be4cb92958dd32.jpg',
@@ -164,7 +155,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://umeblowana.com/userdata/public/gfx/5379/Komplet-mebli-do-lazienki-w-stylu-loft-80-cm.jpg',
@@ -176,7 +166,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.lustrodlaciebie.pl/galerie/l/lustro-do-makijazu-wizazu-holl_2032.jpg',
@@ -188,7 +177,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://bromarkt.pl/pol_pl_Duza-szafa-na-ubrania-180-cm-Dab-artisan-czarny-ISMENA-932_3.jpg',
@@ -200,7 +188,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://a.allegroimg.com/original/11fe09/a41ca80f44a1b06d0467ed8d7458/Szafa-na-Ubrania-Garderoba-Skladana-XXL-Tekstylna',
@@ -212,7 +199,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.resmar.pl/pol_pl_Zestaw-mebli-kuchennych-290x215-cm-Modena-24536_1.jpg',
@@ -224,7 +210,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://antyki24.pl/environment/cache/images/500_500_productGfx_e1be05b730a946274d13299ecc6230bc.jpg',
@@ -236,7 +221,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://i.dobrzemieszkaj.pl/i/72/13/41/r3/1920/meble-do-salonu-10-swietnych-kolekcji-na-kazda-kieszen.jpg',
@@ -248,7 +232,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://mebletwojemiejsce.pl/fotosD/13_meble_z_litego_drewna_na_wymiar_warszawa.jpg',
@@ -260,7 +243,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://meblini.pl/userdata/public/gfx/20450/krzeslo-TUGO-2-do-jadalni-kuchni.jpg',
@@ -272,7 +254,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.zyrandole24.pl/images/allegro_foto/zdjecia/K213/IMG_2244-30-01-19-01-10.jpeg',
@@ -284,7 +265,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground: 'https://lissy.pl/wp-content/uploads/Witryna-150-Lugo.jpg',
       isFavourite: false,
@@ -295,7 +275,6 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://lissy.pl/wp-content/uploads/szafka-nocna-Lugo-aranz.jpg',
@@ -308,7 +287,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       like: true,
       compare: true,
@@ -322,7 +300,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/dalfred-stolek-barowy-czarny__0874458_pe595557_s5.jpg?f=xxs',
@@ -334,7 +311,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/stig-stolek-barowy-z-oparciem-czarny-czarny__0948113_pe798868_s5.jpg?f=xxs',
@@ -345,7 +321,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/henriksdal-stolek-barowy-z-oparciem-ciemnobrazowy-vibberbo-czarny-bezowy__0770696_pe755597_s5.jpg?f=xxs',
@@ -356,7 +331,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/franklin-taboret-skladany-z-oparciem-czarny-czarny__0874580_pe680502_s5.jpg?f=xxs',
@@ -367,7 +341,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/nordviken-stolek-barowy-z-oparciem-czarny__0797137_pe766703_s5.jpg?f=xxs',
@@ -378,7 +351,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/henriksdal-pokrycie-stolka-barowego-z-oparciem-vibberbo-czarny-bezowy__0770696_pe755597_s5.jpg?f=xxs',
@@ -389,7 +361,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/henriksdal-stolek-barowy-z-oparciem-rama-ciemnobrazowy__0873493_pe590683_s5.jpg?f=xxs',
@@ -400,7 +371,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/nilsolle-stolek-barowy-brzoza__0874053_pe595533_s5.jpg?f=xxs',
@@ -411,7 +381,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/franklin-taboret-skladany-z-oparciem-bialy-bialy__0874577_pe680524_s5.jpg?f=xxs',
@@ -422,7 +391,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/raskog-stolek-barowy-czarny__0873897_pe620307_s5.jpg?f=xxs',
@@ -433,7 +401,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraryd-stolek-barowy-z-oparciem-czarny__0873586_pe689186_s5.jpg?f=xxs',
@@ -444,7 +411,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/janinge-stolek-barowy-szary__0873831_pe595574_s5.jpg?f=xxs',
@@ -455,7 +421,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/glenn-stolek-barowy-bialy-chrom__0873987_pe653485_s5.jpg?f=xxs',
@@ -466,7 +431,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/franklin-taboret-skladany-z-oparciem-bialy-bialy__0873922_pe680516_s5.jpg?f=xxs',
@@ -477,7 +441,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/yngvar-stolek-barowy-antracyt__0929674_ph170546_s5.jpg?f=xxs',
@@ -488,7 +451,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/henriksdal-stolek-barowy-z-oparciem-brazowoczarny-glose-czarny__0873533_pe595540_s5.jpg?f=xxs',
@@ -499,7 +461,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/bernhard-stolek-barowy-z-oparciem-chrom-mjuk-bialy__0873458_pe595556_s5.jpg?f=xxs',
@@ -521,7 +482,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-stolek-barowy-z-oparciem-brzoza__0873716_pe720507_s5.jpg?f=xxs',
@@ -532,7 +492,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ekedalen-stolek-barowy-z-oparciem-ciemnobrazowy-orrsta-jasnoszary__0872149_pe720430_s5.jpg?f=xxs',
@@ -543,7 +502,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/volfgang-stolek-barowy-z-oparciem-chrom-gunnared-srednioszary__0873681_pe700225_s5.jpg?f=xxs',
@@ -554,7 +512,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/bekvaem-taboret-ze-schodkiem-brzoza__0870863_pe602961_s5.jpg?f=xxs',
@@ -565,7 +522,6 @@ const initialState = {
       category: 'chair',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/lidkullen-stolek-do-siedzenia-stania-gunnared-ciemnoszary__0798458_pe767227_s5.jpg?f=xxs',
@@ -577,7 +533,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       like: true,
       compare: true,
@@ -591,7 +546,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/glostad-sofa-2-osobowa-knisa-ciemnoszary__0950898_pe800738_s5.jpg?f=xxs',
@@ -603,7 +557,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/friheten-naroznik-z-funkcja-spania-skiftebo-ciemnoszary__0833845_pe603738_s5.jpg?f=xxs',
@@ -613,8 +566,8 @@ const initialState = {
       name: 'Evertsberg 4',
       category: 'sofa',
       price: 30,
-      stars: 2,
       promo: 'sale',
+      stars: 2,
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/arviken-sofa-trzyosobowa-rozkladana-bezowy__0277586_pe416615_s5.jpg?f=xxss',
@@ -625,7 +578,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ektorp-sofa-3-osobowa-remmarn-jasnoszary__0924993_pe788685_s5.jpg?f=xxs',
@@ -636,7 +588,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/asarum-rozkladana-sofa-3-osobowa-granatowy__1011233_pe828427_s5.jpg?f=xxs',
@@ -647,7 +598,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/soederhamn-sekcja-3-osobowa-samsta-ciemnoszary__0666104_pe713402_s5.jpg?f=xxs',
@@ -658,7 +608,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/bastubo-rozkladana-sofa-3-osobowa-z-szezlongiem-jasnoszary__0940238_pe794894_s5.jpg?f=xxs',
@@ -669,7 +618,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/evertsberg-sofa-2-osobowa-rozkladana-z-pojemnikiem-ciemnoszary__0799073_pe767472_s5.jpg?f=xxs',
@@ -680,7 +628,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/askeby-sofa-dwuosobowa-rozkladana-niebieski__0834858_pe645547_s5.jpg?f=xxs',
@@ -691,7 +638,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ektorp-sofa-2-osobowa-remmarn-jasnoszary__0818542_pe774473_s5.jpg?f=xxs',
@@ -702,7 +648,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/graelviken-rozkladana-sofa-3-osobowa-ciemnoszary__0830273_pe720080_s5.jpg?f=xxs',
@@ -713,7 +658,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/holmsund-naroznik-z-funkcja-spania-nordvalla-srednioszary__0829250_pe600302_s5.jpg?f=xxs',
@@ -724,7 +668,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/nyhamn-rozkladana-sofa-3-osobowa-z-materacem-piankowym-knisa-szary-bez__0767327_pe754068_s5.jpg?f=xxs',
@@ -735,7 +678,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/askesta-rozkladana-sofa-3-osobowa-skiftebo-zolty__0779684_pe759648_s5.jpg?f=xxs',
@@ -746,7 +688,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/landskrona-sofa-2-osobowa-gunnared-ciemnoszary-drewno__0825406_pe680171_s5.jpg?f=xxs',
@@ -757,7 +698,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/bennebol-rozkladana-sofa-3-osobowa-z-szezlongiem-granatowy__0940191_pe794866_s5.jpg?f=xxs',
@@ -768,7 +708,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/knopparp-sofa-2-osobowa-knisa-jasnoszary__0827225_pe706767_s5.jpg?f=xxs',
@@ -779,7 +718,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ektorp-sofa-narozna-4-osobowa-remmarn-jasnoszary__0818596_pe774525_s5.jpg?f=xxs',
@@ -790,7 +728,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/holmsund-sofa-trzyosobowa-rozkladana-nordvalla-srednioszary__0834611_pe600340_s5.jpg?f=xxs',
@@ -801,7 +738,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/kivik-sofa-trzyosobowa-orrsta-jasnoszary__0788749_pe763721_s5.jpg?f=xxs',
@@ -812,7 +748,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/soederhamn-sofa-3-osobowa-samsta-ciemnoszary__0666156_pe713429_s5.jpg?f=xxs',
@@ -822,8 +757,8 @@ const initialState = {
       name: 'Evertsberg 23',
       category: 'sofa',
       price: 30,
-      stars: 2,
       promo: 'sale',
+      stars: 2,
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/grimhult-rozkladana-sofa-3-osobowa-szary__0947880_pe798685_s5.jpg?f=xxs',
@@ -834,7 +769,6 @@ const initialState = {
       category: 'sofa',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/soederhamn-sofa-4-osobowa-z-szezlongiem-i-otwarty-koniec-samsta-ciemnoszary__0666445_pe713552_s5.jpg?f=xxss',
@@ -846,7 +780,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       like: true,
       compare: true,
@@ -860,7 +793,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/tarsele-stol-rozkladany-okl-deb-czarny__0944977_pe797515_s5.jpg?f=xxs',
@@ -872,7 +804,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/danderyd-stol-bialy__0946312_ph172540_s5.jpg?f=xxs',
@@ -883,7 +814,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ingatorp-stol-rozkladany-szary__0870671_pe691012_s5.jpg?f=xxs',
@@ -894,7 +824,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/linnmon-adils-stol-bialy__0737165_pe740925_s5.jpg?f=xxs',
@@ -905,7 +834,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/lack-stolik-bialy__0702208_pe724343_s5.jpg?f=xxs',
@@ -916,7 +844,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/micke-biurko-bialy__0851508_pe565256_s5.jpg?f=xxs',
@@ -927,7 +854,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/melltorp-stol-bialy__0870501_pe695865_s5.jpg?f=xxs',
@@ -938,7 +864,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/malm-toaletka-bialy__0858727_pe555871_s5.jpg?f=xxs',
@@ -949,7 +874,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/micke-biurko-bialy__0851288_pe565258_s5.jpg?f=xxs',
@@ -960,7 +884,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/micke-biurko-bialy__0921905_pe787996_s5.jpg?f=xxs',
@@ -971,7 +894,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/lack-stolik-kawowy-bialy__0702217_pe724349_s5.jpg?f=xxs',
@@ -982,7 +904,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/vittsjoe-stolik-pod-laptopa-czarnobraz-szklo__0855294_pe564652_s5.jpg?f=xxs',
@@ -993,7 +914,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/lagkapten-olov-biurko-dab-bejcowany-na-bialo-bialy__0977612_pe813682_s5.jpg?f=xxs',
@@ -1004,7 +924,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/lagkapten-adils-biurko-bialy__0977229_pe813472_s5.jpg?f=xxs',
@@ -1015,7 +934,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/malm-biurko-z-wysuwanym-panelem-bialy__0403679_pe565683_s5.jpg?f=xxs',
@@ -1026,7 +944,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/malm-biurko-bialy__0850916_pe602578_s5.jpg?f=xxs',
@@ -1037,7 +954,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/lagkapten-alex-biurko-bialy__0977483_pe813612_s5.jpg?f=xxs',
@@ -1048,7 +964,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/tarsele-stol-rozkladany-okl-deb-czarny__0944977_pe797515_s5.jpg?f=xxs',
@@ -1059,7 +974,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/hemnes-biurko-biala-bejca__0849790_pe616054_s5.jpg?f=xxs',
@@ -1070,7 +984,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/brimnes-biurko-bialy__0926236_pe789116_s5.jpg?f=xxs',
@@ -1081,7 +994,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ingatorp-stol-rozkladany-bialy__0870419_pe668361_s5.jpg?f=xxs',
@@ -1092,7 +1004,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/taerendoe-stol-czarny__0720893_ph004838_s5.jpg?f=xxs',
@@ -1103,7 +1014,6 @@ const initialState = {
       category: 'table',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/bjursta-stol-rozkladany-okl-deb__0870090_pe594429_s5.jpg?f=xxs',
@@ -1115,7 +1025,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       like: true,
       compare: true,
@@ -1129,7 +1038,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/tommaryd-stol-okleina-debowa-bejcowana-na-bialo-bialy__0939691_pe794636_s5.jpg?f=xxs',
@@ -1141,7 +1049,6 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-norraryd-stol-barowy-i-2-stolki-czarny-czarny__0871732_pe696583_s5.jpg?f=xxs',
@@ -1152,7 +1059,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-stolek-brzoza__0682556_pe720528_s5.jpg?f=xxs',
@@ -1163,7 +1069,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/yngvar-krzeslo-antracyt__0750850_pe746841_s5.jpg?f=xxs',
@@ -1174,7 +1079,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/stensele-norraryd-stol-barowy-i-2-stolki-antracyt-antracyt-czarny__0872101_pe719776_s5.jpg?f=xxs',
@@ -1185,7 +1089,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-stol-brzoza__0682560_pe720534_s5.jpg?f=xxs',
@@ -1196,7 +1099,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/roenninge-krzeslo-zielony__0933468_ph168894_s5.jpg?f=xxs',
@@ -1207,7 +1109,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraryd-stolek-barowy-z-oparciem-czarny__0873586_pe689186_s5.jpg?f=xxs',
@@ -1218,7 +1119,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/janinge-stolek-barowy-szary__0873831_pe595574_s5.jpg?f=xxs',
@@ -1229,7 +1129,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/janinge-krzeslo-z-podlokietnikami-szary__0872870_pe595419_s5.jpg?f=xxs',
@@ -1240,7 +1139,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/yngvar-stolek-barowy-antracyt__0929674_ph170546_s5.jpg?f=xxs',
@@ -1251,7 +1149,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/stensele-stol-jasnoszary-jasnoszary__0871560_pe719789_s5.jpg?f=xxs',
@@ -1262,7 +1159,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/yngvar-krzeslo-czerwony__0750852_pe746842_s5.jpg?f=xxs',
@@ -1273,7 +1169,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/stensele-roenninge-stol-i-2-krzesla-jasnoszary-jasnoszary-brzoza__0871560_pe719789_s5.jpg?f=xxs',
@@ -1284,7 +1179,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-stolek-barowy-z-oparciem-brzoza__0873716_pe720507_s5.jpg?f=xxs',
@@ -1295,7 +1189,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/ikea-ps-2012-krzeslo-z-podlokietnikami-czarny__0209104_pe326299_s5.jpg?f=xxs',
@@ -1306,7 +1199,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/janinge-krzeslo-bialy__0872443_pe653411_s5.jpg?f=xxs',
@@ -1317,7 +1209,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/norraker-stol-barowy-czarny__0872216_pe640955_s5.jpg?f=xxs',
@@ -1328,7 +1219,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/stensele-stol-barowy-antracyt-antracyt__0872101_pe719776_s5.jpg?f=xxs',
@@ -1339,7 +1229,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/svenbertil-krzeslo-z-podlokietnikami-bialy-dietmar-chrom__0483272_pe620785_s5.jpg?f=xxs',
@@ -1350,7 +1239,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/leifarne-krzeslo-z-podlokietnikami-bialy-dietmar-czarny__0483257_pe620786_s5.jpg?f=xxs',
@@ -1361,7 +1249,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/stensele-stol-antracyt-antracyt__0773241_pe756242_s5.jpg?f=xxs',
@@ -1372,7 +1259,6 @@ const initialState = {
       category: 'dining',
       price: 30,
       stars: 2,
-      promo: 'sale',
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/leifarne-krzeslo-z-podlokietnikami-ciemnozolty-dietmar-chrom__0745145_pe743604_s5.jpg?f=xxs',

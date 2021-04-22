@@ -1,0 +1,48 @@
+@import "../../../styles/settings.scss";
+.wrapper {
+  margin: $base-padding 0;
+  .promoTitle {
+    .dots {
+      ul {
+        margin: 0;
+        padding: 0 0 0 1rem;
+        list-style: none;
+        background-color: inherit;
+
+        li {
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: $color-light-secondary;
+            font-size: 0;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+    display: flex;
+    color: $color-light-secondary;
+    align-content: center;
+    justify-content: space-between;
+    height: 50px;
+    background: $form-border-color;
+  }
+  .heading {
+    h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 50px;
+      padding-left: 1rem;
+    }
+  }
+}
+
