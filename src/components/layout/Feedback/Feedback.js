@@ -17,7 +17,7 @@ class Feedback extends React.Component {
   changePagePrev() {
     let currentComment = this.state.activeComment;
     const { comments } = this.props;
-    const commentsCount = Math.ceil(comments.length / 1);
+    const commentsCount = comments.length;
 
     if (currentComment < commentsCount - 1) {
       this.handlePageChange(currentComment + 1);
