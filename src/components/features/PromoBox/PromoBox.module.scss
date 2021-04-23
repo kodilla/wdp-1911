@@ -1,5 +1,6 @@
 @import "../../../styles/settings.scss";
 
+.wrapper {
   .promoTitle {
     .dots {
       ul {
@@ -44,6 +45,42 @@
       padding-left: 1rem;
     }
   }
+  .galleryButtons {
+    .button {
+      &:hover {
+        background: $primary;
+      }
+      display: flex;
+      flex-grow: 1;
+      background: $form-border-color;
+      justify-content: center;
+      align-items: center;
+      color: $color-light-primary;
+    }
+    display: flex;
+    flex-direction: row;
+    height: 4.7rem;
+  }
+  .photos {
+    .photo {
+      display: flex;
+      max-width: 100%;
+      height: auto;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+    }
+    margin-left: $base-padding;
+    object-fit: cover;
+    flex-direction: column;
+    align-content: flex-end;
+    display: flex;
+    height: 100%;
+  }
+  display: flex;
+
+}
+
 
 .root {
   margin: $base-padding auto;

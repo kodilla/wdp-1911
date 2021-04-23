@@ -3,11 +3,11 @@
 .root {
   background-color: $color-light-primary;
   border: 1px solid $color-light-secondary;
-  margin-bottom: 2rem;
+
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    padding: 100% 10px 0 10px;
     background: {
       color: $color-light-tertiary;
       size: cover;
