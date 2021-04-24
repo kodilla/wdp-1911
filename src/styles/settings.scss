@@ -36,8 +36,6 @@ $phone-paragraph-color: $light-grey-tertiary;
 $cardcounter-color: $light-grey-quaternary;
 $list-element-text-color: $light-grey-5th;
 
-$form-border-color: #292929;
-
 %buttons-hover-before {
   background-image: linear-gradient(45deg, $primary 50%, transparent 50%);
   background-position: 100%;
@@ -48,7 +46,7 @@ $form-border-color: #292929;
 
 %buttons-hover-after {
   background-position: 0;
-  color: #fff;
+  color: $color-light-primary;
 };
 
 %text-hover-before {
