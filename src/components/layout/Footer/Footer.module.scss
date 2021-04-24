@@ -22,9 +22,10 @@
             font-size: 14px;
             line-height: 30px;
             color: $list-element-text-color;
+            @extend %text-hover-before;
 
             &:hover {
-              color: $color-light-primary;
+              @extend %text-hover-after;
             }
           }
         }
@@ -71,9 +72,10 @@
           a {
             color: $list-element-text-color;
             text-decoration: none;
+            @extend %text-hover-before;
 
             &:hover {
-              color: $primary;
+              @extend %text-hover-after;
             }
           }
         }
