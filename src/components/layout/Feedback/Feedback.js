@@ -75,12 +75,14 @@ class Feedback extends React.Component {
                 </div>
                 <div className='row'>
                   <div className={'col-6 ' + styles.imageBox}>
-                    <img src={item.profilePic} />
+                    <img src={item.profilePic} alt={item.name} />
                   </div>
-                  <div className='col-6'>
-                    {item.name}
-                    <br />
-                    {item.client}
+                  <div className={'col-6 ' + styles.name}>
+                    <p>
+                      {item.name}
+                      <br />
+                      {item.client}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -99,7 +101,7 @@ Feedback.propTypes = {
       text: PropTypes.string,
       profilePic: PropTypes.string,
       name: PropTypes.string,
-      cielnt: PropTypes.string,
+      client: PropTypes.string,
     })
   ),
 };
