@@ -7,27 +7,6 @@
     background-color: $footer-bg;
     padding: 3rem 0;
 
-    /* :global(.row) > :global(.col) {
-      margin-left: 0;
-      @include breakpoint(mobileonly) {
-        flex-basis: 100%;
-        margin-left: 10px;
-      }
-      @include breakpoint(phablet){
-        flex-basis: 50%;
-      }  
-      @include breakpoint(tablet) {
-        flex-basis: 20%;
-      }
-      @include breakpoint(laptop) {
-        flex-basis: 20%;
-      }  
-      @include breakpoint(desktop) {
-        flex-basis: 25%;
-      }  
-    } */
-
-
     .menuWrapper {
   
       h6 {
