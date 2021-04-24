@@ -18,22 +18,6 @@ const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   addFavourite({ id: id, isFavourite: !isFavourite });
 };
 
-const toggleCompare = (
-  id,
-  isCompare,
-  event,
-  addCompare,
-  removeCompare,
-  canAddCompare
-) => {
-  event.preventDefault();
-  if (isCompare === false && canAddCompare) {
-    addCompare(id);
-  } else {
-    removeCompare(id);
-  }
-};
-
 const ProductBox = ({
   name,
   price,
@@ -43,14 +27,11 @@ const ProductBox = ({
   oldPrice,
   id,
   addFavourite,
-  addCompare,
-  removeCompare,
   isFavourite,
   isFavorite,
   compare,
   myRating,
   addRating,
-  canAddCompare,
 }) => (
   <div className={styles.root}>
     <div
@@ -90,19 +71,7 @@ const ProductBox = ({
               Favorite
             </FontAwesomeIcon>
           </Button>
-          <Button
-            variant={compare ? 'outlineCompare' : 'outline'}
-            onClick={event =>
-              toggleCompare(
-                id,
-                compare,
-                event,
-                addCompare,
-                removeCompare,
-                canAddCompare
-              )
-            }
-          >
+          <Button variant='outline'>
             <FontAwesomeIcon
               icon={faExchangeAlt}
               className={compare ? styles.compare : ''}
@@ -138,15 +107,12 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   photoBackground: PropTypes.string,
   addFavourite: PropTypes.func,
-  addCompare: PropTypes.func,
-  removeCompare: PropTypes.func,
   id: PropTypes.string,
   isFavourite: PropTypes.bool,
   isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
   myRating: PropTypes.any,
   addRating: PropTypes.func,
-  canAddCompare: PropTypes.bool,
 };
 
 export default ProductBox;
