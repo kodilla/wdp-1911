@@ -7,7 +7,7 @@
     background-color: $footer-bg;
     padding: 3rem 0;
 
-    :global(.row) > :global(.col) {
+    /* :global(.row) > :global(.col) {
       margin-left: 0;
       @include breakpoint(mobileonly) {
         flex-basis: 100%;
@@ -25,7 +25,7 @@
       @include breakpoint(desktop) {
         flex-basis: 25%;
       }  
-    }
+    } */
 
 
     .menuWrapper {
@@ -88,13 +88,13 @@
       @include breakpoint(mobileonly) {
         flex-basis: 100%;
         padding-left: 0;
-        color: #ffffff;
+        color: $color-light-primary;
         text-align: center !important;
         font-size: 10px;
       }
       @include breakpoint(phablet){
         flex-basis: 100%;
-        color: #ffffff;
+        color: $color-light-primary;
         text-align: center !important;
         font-size: 10px;
       }  
@@ -184,7 +184,6 @@
             }
     
             &:hover {
-              // color: $primary;
               text-decoration: none;
               @extend %text-hover-after;
             }
