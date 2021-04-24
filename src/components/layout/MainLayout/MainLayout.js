@@ -12,9 +12,13 @@ class MainLayout extends React.Component {
 
   componentWillMount() {
     const { setRwdMode } = this.props;
+    let currentRwdMode = '';
     window.addEventListener('resize', e => {
       const mode = this.checkMode(e.target.window.innerWidth);
-      setRwdMode(mode);
+      if (mode !== currentRwdMode) {
+        currentRwdMode = mode;
+        setRwdMode(mode);
+      }
       return null;
     });
   }
@@ -23,6 +27,11 @@ class MainLayout extends React.Component {
     const event = new Event('resize');
     window.dispatchEvent(event);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize');
+  }
+
   render() {
     const { children } = this.props;
 

@@ -44,7 +44,7 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
     const pagesCount = Math.ceil(
-      categoryProducts.length / this.rwdCardsInRow[rwdMode.mode]
+      categoryProducts.length / this.rwdCardsInRow[rwdMode.rwdMode]
     );
 
     if (currentPage < pagesCount - 1) {
@@ -73,9 +73,7 @@ class NewFurniture extends React.Component {
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(
-      categoryProducts.length / this.rwdCardsInRow[rwdMode.mode]
-    );
+    const pagesCount = Math.ceil(categoryProducts.length / this.rwdCardsInRow[rwdMode]);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -125,8 +123,8 @@ class NewFurniture extends React.Component {
             <div className={`row ${styles.productsRow} ${this.state.className}`}>
               {categoryProducts
                 .slice(
-                  activePage * this.rwdCardsInRow[rwdMode.mode],
-                  (activePage + 1) * this.rwdCardsInRow[rwdMode.mode]
+                  activePage * this.rwdCardsInRow[rwdMode],
+                  (activePage + 1) * this.rwdCardsInRow[rwdMode]
                 )
                 .map(item => (
                   <div key={item.id} className={`col ${styles.product}`}>

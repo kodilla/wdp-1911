@@ -10,13 +10,14 @@ const SET_RWD_MODE = createActionName('SET_RWD_MODE');
 
 /* action creators */
 
-export const setRwdMode = mode => ({ mode, type: SET_RWD_MODE });
+export const setRwdMode = rwdMode => ({ rwdMode: rwdMode, type: SET_RWD_MODE });
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case SET_RWD_MODE: {
-      return statePart !== action ? action : statePart;
+      console.log(action, statePart);
+      return statePart.rwdMode !== action.rwdMode ? action.rwdMode : statePart.rwdMode;
     }
     default:
       return statePart;
