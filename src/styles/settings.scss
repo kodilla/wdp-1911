@@ -36,22 +36,20 @@ $phone-paragraph-color: $light-grey-tertiary;
 $cardcounter-color: $light-grey-quaternary;
 $list-element-text-color: $light-grey-5th;
 
-$form-border-color: #292929;
-
 // PLACEHOLDER FOR HOVER
 
 %buttons-hover-before {
   background-image: linear-gradient(45deg, $primary 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  background-color: #2a2a2a;
+  background-color: $text-color;
   transition: 250ms ease-in-out, color 250ms ease-in-out;
   color: $primary;
 }
 
 %buttons-hover-after {
   background-position: 0%;
-  color: #fff;
+  color: $color-light-primary;
   text-decoration: none;
 }
 

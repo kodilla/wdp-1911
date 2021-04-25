@@ -30,7 +30,7 @@
             font-size: 14px;
             line-height: 30px;
             color: $list-element-text-color;
-            @extend %text-hover-before;    
+            @extend %text-hover-before;
       
             &:hover {
               @extend %text-hover-after;
