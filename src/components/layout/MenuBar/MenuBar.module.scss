@@ -49,7 +49,6 @@
       &:hover {
         @extend %buttons-hover-after;
       }
-
       &.active {
         background-color: $primary;
         color: $color-light-primary;

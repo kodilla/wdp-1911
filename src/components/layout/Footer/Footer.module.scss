@@ -155,7 +155,7 @@
             color: $list-element-text-color;
             text-decoration: none;
             @extend %text-hover-before;
-    
+
             &:hover {
               @extend %text-hover-after;
             }

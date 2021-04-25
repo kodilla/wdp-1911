@@ -34,7 +34,7 @@
   line-height: 22px;
   @extend %buttons-hover-before;
 
-  &:not(.noHover):hover { 
+  &:not(.noHover):hover {
     background-color: $footer-claim-bg;
     @extend %buttons-hover-after;
     background-color: $text-color;
