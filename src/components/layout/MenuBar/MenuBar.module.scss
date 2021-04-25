@@ -44,11 +44,10 @@
       border-top: 4px solid $color-light-primary;
       font-weight: 500;
       letter-spacing: 1px;
-      @extend %button-hover-before;
+      @extend %buttons-hover-before;
 
       &:hover {
-        @extend %button-hover-after;
-        // color: #fff;
+        @extend %buttons-hover-after;
       }
 
       &.active {

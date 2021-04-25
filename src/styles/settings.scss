@@ -40,7 +40,7 @@ $form-border-color: #292929;
 
 // PLACEHOLDER FOR HOVER
 
-%button-hover-before {
+%buttons-hover-before {
   background-image: linear-gradient(45deg, $primary 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
@@ -49,7 +49,7 @@ $form-border-color: #292929;
   color: $primary;
 }
 
-%button-hover-after {
+%buttons-hover-after {
   background-position: 0%;
   color: #fff;
   text-decoration: none;

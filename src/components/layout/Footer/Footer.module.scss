@@ -31,9 +31,6 @@
             line-height: 30px;
             color: $list-element-text-color;
             @extend %text-hover-before;    
-            @include breakpoint(mobileonly) {
-              font-size: 10px;
-            }              
       
             &:hover {
               @extend %text-hover-after;
@@ -158,12 +155,8 @@
             color: $list-element-text-color;
             text-decoration: none;
             @extend %text-hover-before;
-            @include breakpoint(tablet) {
-              font-size: 12px;
-            }
     
             &:hover {
-              text-decoration: none;
               @extend %text-hover-after;
             }
           }

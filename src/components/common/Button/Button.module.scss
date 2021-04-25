@@ -7,10 +7,13 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
-  @extend %button-hover-before;
+  @extend %buttons-hover-before;
 
   &:not(.noHover):hover {
-    @extend %button-hover-after;
+    color: $color-light-primary !important;
+    background-color: $primary;
+    text-decoration: none;
+    @extend %buttons-hover-after;
   }
 }
 
@@ -29,10 +32,13 @@
   color: $text-color;
   font-size: 13px;
   line-height: 22px;
-  @extend %button-hover-before;
+  @extend %buttons-hover-before;
 
   &:not(.noHover):hover { 
-    @extend %button-hover-after;
+    background-color: $footer-claim-bg;
+    @extend %buttons-hover-after;
+    background-color: $text-color;
+    color: $color-light-primary;
   }
 }
 
