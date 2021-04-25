@@ -34,7 +34,7 @@
     }
 
     a {
-      color: $text-color;
+      // color: $text-color;
       text-transform: uppercase;
       font-size: 12px;
       padding: 1rem;
@@ -44,8 +44,11 @@
       border-top: 4px solid $color-light-primary;
       font-weight: 500;
       letter-spacing: 1px;
+      @extend %buttons-hover-before;
 
-      &:hover,
+      &:hover {
+        @extend %buttons-hover-after;
+      }
       &.active {
         background-color: $primary;
         color: $color-light-primary;

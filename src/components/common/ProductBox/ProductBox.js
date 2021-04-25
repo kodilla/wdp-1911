@@ -4,16 +4,34 @@ import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faStar,
+  // faStar,
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
+// eslint-disable-next-line no-unused-vars
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import StarRating from '../StarRating/StarRating';
 
 const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   event.preventDefault();
   addFavourite({ id: id, isFavourite: !isFavourite });
+};
+
+const toggleCompare = (
+  id,
+  isCompare,
+  event,
+  addCompare,
+  removeCompare,
+  canAddCompare
+) => {
+  event.preventDefault();
+  if (isCompare === false && canAddCompare) {
+    addCompare(id);
+  } else {
+    removeCompare(id);
+  }
 };
 
 const ProductBox = ({
@@ -25,9 +43,14 @@ const ProductBox = ({
   oldPrice,
   id,
   addFavourite,
+  addCompare,
+  removeCompare,
   isFavourite,
   isFavorite,
   compare,
+  myRating,
+  addRating,
+  canAddCompare,
 }) => (
   <div className={styles.root}>
     <div
@@ -47,15 +70,7 @@ const ProductBox = ({
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))}
+        <StarRating myRating={myRating} stars={stars} addRating={addRating} id={id} />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -75,7 +90,19 @@ const ProductBox = ({
               Favorite
             </FontAwesomeIcon>
           </Button>
-          <Button variant='outline'>
+          <Button
+            variant={compare ? 'outlineCompare' : 'outline'}
+            onClick={event =>
+              toggleCompare(
+                id,
+                compare,
+                event,
+                addCompare,
+                removeCompare,
+                canAddCompare
+              )
+            }
+          >
             <FontAwesomeIcon
               icon={faExchangeAlt}
               className={compare ? styles.compare : ''}
@@ -111,10 +138,15 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   photoBackground: PropTypes.string,
   addFavourite: PropTypes.func,
+  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
   id: PropTypes.string,
   isFavourite: PropTypes.bool,
   isFavorite: PropTypes.bool,
   compare: PropTypes.bool,
+  myRating: PropTypes.any,
+  addRating: PropTypes.func,
+  canAddCompare: PropTypes.bool,
 };
 
 export default ProductBox;
