@@ -12,9 +12,11 @@ export class FurnitureGallery extends Component {
   };
 
   render() {
-    const { products, addFavourite, addRating } = this.props;
+    const { products, addFavourite, addRating, addCompare, removeCompare } = this.props;
 
     const { activeCategorySales } = this.state;
+
+    const canAddCompare = products.filter(item => item.compare).length;
 
     const featuredProducts = products.filter(product => {
       switch (activeCategorySales) {
@@ -36,6 +38,9 @@ export class FurnitureGallery extends Component {
                 products={featuredProducts}
                 addFavourite={addFavourite}
                 addRating={addRating}
+                addCompare={addCompare}
+                removeCompare={removeCompare}
+                canAddCompare={canAddCompare < 4 ? true : false}
               />
             </div>
             <div className='col-6'>
@@ -68,6 +73,8 @@ FurnitureGallery.propTypes = {
   activeCategorySales: PropTypes.string,
   addFavourite: PropTypes.func,
   addRating: PropTypes.func,
+  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
 };
 
 export default FurnitureGallery;

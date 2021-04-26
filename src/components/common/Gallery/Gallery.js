@@ -16,7 +16,31 @@ const addFurnitureToFavourite = (id, isFavourite, event, addFavourite) => {
   addFavourite({ id: id, isFavourite: !isFavourite });
 };
 
-const Gallery = ({ activeCategorySales, products, addFavourite, addRating }) => {
+const toggleCompare = (
+  id,
+  isCompare,
+  event,
+  addCompare,
+  removeCompare,
+  canAddCompare
+) => {
+  event.preventDefault();
+  if (isCompare === false && canAddCompare) {
+    addCompare(id);
+  } else {
+    removeCompare(id);
+  }
+};
+
+const Gallery = ({
+  activeCategorySales,
+  products,
+  addFavourite,
+  addRating,
+  addCompare,
+  removeCompare,
+  canAddCompare,
+}) => {
   const photos = products.filter(product => product.category === 'bed');
   const activePhoto = photos[0];
 
@@ -76,7 +100,19 @@ const Gallery = ({ activeCategorySales, products, addFavourite, addRating }) => 
                   <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
                 </Button>
 
-                <Button variant={'outline'}>
+                <Button
+                  variant={activePhoto.compare ? 'outlineCompare' : 'outline'}
+                  onClick={event =>
+                    toggleCompare(
+                      activePhoto.id,
+                      activePhoto.compare,
+                      event,
+                      addCompare,
+                      removeCompare,
+                      canAddCompare
+                    )
+                  }
+                >
                   <span className={styles.tooltip}>Add to compare</span>
                   <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
                 </Button>
@@ -138,6 +174,9 @@ Gallery.propTypes = {
   activeCategorySales: PropTypes.string,
   addFavourite: PropTypes.func,
   addRating: PropTypes.func,
+  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
+  canAddCompare: PropTypes.bool,
 };
 
 export default Gallery;
