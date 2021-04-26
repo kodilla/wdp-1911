@@ -24,8 +24,8 @@ class MainLayout extends React.Component {
   }
 
   componentDidMount() {
-    const event = new Event('resize');
-    window.dispatchEvent(event);
+    const { setRwdMode } = this.props;
+    setRwdMode(this.checkMode(window.innerWidth));
   }
 
   componentWillUnmount() {
