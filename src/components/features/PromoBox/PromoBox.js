@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PromoProductBox from '../../common/PromoProductBox/PromoProductBox';
+import PromoGallery from '../../common/PromoGallery/PromoGallery';
+import styles from './PromoBox.module.scss';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../common/Button/Button';
-
-import styles from './PromoBox.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class PromoBox extends React.Component {
   propTypes = {
@@ -21,14 +22,15 @@ class PromoBox extends React.Component {
   };
 
   render() {
-    const { products, promoImages } = this.props;
+    const { products } = this.props;
     const { activeProduct, activePromoImage } = this.state;
 
     const saleProducts = products.filter(item => item.promo === 'sale');
-    const productsCount = saleProducts.length;
+    const promoProducts = products.filter(item => item.promo === 'promo');
+    const salesCount = saleProducts.length;
 
     const dots = [];
-    for (let i = 0; i < productsCount; i++) {
+    for (let i = 0; i < salesCount; i++) {
       dots.push(
         <li>
           <a className={i === activeProduct && styles.active}>product {i}</a>
@@ -38,50 +40,35 @@ class PromoBox extends React.Component {
     return (
       <div className={styles.root}>
         <div className='container'>
-          <div className={styles.wrapper}>
-            <div className={styles.promoItem}>
-              <div className={'col-3' + styles.paddingZero}>
-                <div className={styles.promoTitle}>
-                  <div className={styles.heading}>
-                    <h3>Hot Deals</h3>
-                  </div>
-                  <div className={'col-auto ' + styles.dots}>
-                    <ul>{dots}</ul>
-                  </div>
+          <div className={styles.promoWrapper}>
+            <div className={styles.productBox}>
+              <div className={styles.promoTitle}>
+                <div className={styles.heading}>
+                  <h3>Hot Deals</h3>
                 </div>
-                {saleProducts.slice(activeProduct, activeProduct + 1).map(item => (
-                  <div key={item.id}>
-                    <PromoProductBox {...item} />
-                  </div>
-                ))}
+                <div className={'col-auto ' + styles.dots}>
+                  <ul>{dots}</ul>
+                </div>
               </div>
+              {saleProducts.slice(activeProduct, activeProduct + 1).map(item => (
+                <div key={item.id}>
+                  <PromoProductBox {...item} />
+                </div>
+              ))}
             </div>
-            <div className={styles.promoItemTwo}>
-              <div className={styles.photos}>
-                {promoImages.slice(activePromoImage, activePromoImage + 1).map(item => (
-                  <div key={item.id}>
-                    <div>
-                      <img src={item.photoUrl} className={styles.photo} alt='obrazek' />
-                    </div>
-                  </div>
-                ))}
-                <div className={styles.promoDescription}>
-                  <p>
-                    indoor <span>furniture</span>
-                  </p>
-                  <p>save up to 50% of all furniture</p>
+            <div className={styles.galleryBox}>
+              {promoProducts.slice(activePromoImage, activePromoImage + 1).map(item => (
+                <div key={item.id}>
+                  <PromoGallery {...item} />
                 </div>
-                <Button variant='small' className={styles.shopButton}>
-                  shop now
+              ))}
+              <div className={styles.galleryButtons}>
+                <Button className={styles.button}>
+                  <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
                 </Button>
-                <div className={styles.galleryButtons}>
-                  <Button className={styles.button}>
-                    <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-                  </Button>
-                  <Button className={styles.button}>
-                    <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
-                  </Button>
-                </div>
+                <Button className={styles.button}>
+                  <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
+                </Button>
               </div>
             </div>
           </div>

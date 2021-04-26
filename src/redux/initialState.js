@@ -16,7 +16,7 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      isFavourite: true,
+      //isFavourite: true,
       compare: true,
       photoBackground:
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
@@ -57,6 +57,7 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
+      promo: 'promo',
       newFurniture: true,
       photoBackground: 'https://www.mirjan24.pl/83016/komoda-nowoczesna-empire.jpg',
       isFavourite: false,
@@ -212,6 +213,7 @@ const initialState = {
       name: 'Aenean Ru Bristique 17',
       category: 'bed',
       price: 30,
+      promo: 'promo',
       stars: 2,
       newFurniture: true,
       photoBackground:
@@ -1289,18 +1291,6 @@ const initialState = {
   cart: {
     products: [],
   },
-  promoImages: [
-    {
-      id: 'sofa',
-      photoUrl:
-        'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    },
-    {
-      id: 'bed',
-      photoUrl:
-        'https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    },
-  ],
 };
 
 export default initialState;

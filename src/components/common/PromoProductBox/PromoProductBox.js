@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import styles from './PromoProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faStar,
   faExchangeAlt,
   faShoppingBasket,
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import StarRating from '../StarRating/StarRating';
 
 const PromoProductBox = ({
   name,
@@ -20,6 +20,9 @@ const PromoProductBox = ({
   oldPrice,
   isFavourite,
   compare,
+  myRating,
+  addRating,
+  id,
 }) => (
   <div className={styles.root}>
     <div
@@ -51,15 +54,7 @@ const PromoProductBox = ({
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <a key={i} href='#'>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </a>
-        ))}
+        <StarRating myRating={myRating} stars={stars} addRating={addRating} id={id} />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -90,8 +85,8 @@ const PromoProductBox = ({
           </Button>
         </div>
       </div>
-      {oldPrice && <div className={styles.oldprice}>$ {oldPrice}</div>}
       <div className={styles.price}>
+        {oldPrice && <div className={styles.oldprice}>$ {oldPrice}</div>}
         <Button noHover variant='small' className={styles.buttonPrice}>
           $ {price}
         </Button>
@@ -111,6 +106,8 @@ PromoProductBox.propTypes = {
   id: PropTypes.string,
   isFavourite: PropTypes.bool,
   compare: PropTypes.bool,
+  myRating: PropTypes.any,
+  addRating: PropTypes.func,
 };
 
 export default PromoProductBox;
