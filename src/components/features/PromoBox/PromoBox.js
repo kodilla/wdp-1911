@@ -5,10 +5,6 @@ import PromoProductBox from '../../common/PromoProductBox/PromoProductBox';
 import PromoGallery from '../../common/PromoGallery/PromoGallery';
 import styles from './PromoBox.module.scss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import Button from '../../common/Button/Button';
-
 class PromoBox extends React.Component {
   propTypes = {
     products: PropTypes.array,
@@ -62,14 +58,6 @@ class PromoBox extends React.Component {
                   <PromoGallery {...item} />
                 </div>
               ))}
-              <div className={styles.galleryButtons}>
-                <Button className={styles.button}>
-                  <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-                </Button>
-                <Button className={styles.button}>
-                  <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
-                </Button>
-              </div>
             </div>
           </div>
         </div>
