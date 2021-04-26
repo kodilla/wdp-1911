@@ -4,7 +4,6 @@ import Swipeable from './../../common/Swipeable/Swipeable';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
-import FurnitureGallery from '../../common/FurnitureGallery/FurnitureGallery';
 
 class NewFurniture extends React.Component {
   leftAction = this.changePagePrev.bind(this);
@@ -13,7 +12,6 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     className: styles.fadeEnd,
-    activeCategorySales: 'top seller',
   };
 
   handlePageChange(page) {
@@ -127,14 +125,6 @@ class NewFurniture extends React.Component {
                     />
                   </div>
                 ))}
-            </div>
-            <div>
-              <FurnitureGallery
-                products={products}
-                activeCategorySales={this.state.activeCategorySales}
-                addFavourite={addFavourite}
-                addRating={addRating}
-              />
             </div>
           </div>
         </div>
