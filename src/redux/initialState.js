@@ -51,6 +51,7 @@ const initialState = {
         'https://s1.meble.pl/gfx/_zdjecia_wspolne/sklep_oferta/2/743/2743454/bzielona_kanapa_w_skandynawskim_stylu_pik___index__4176921222.jpg',
       myRating: 3,
       isFavourite: true,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -67,6 +68,7 @@ const initialState = {
         'https://lectus24.pl/96216-large_default/biurko-z-szufladami-raflo-biale-mat.jpg',
       myRating: null,
       isFavourite: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -82,6 +84,7 @@ const initialState = {
       photoBackground:
         'https://www.meblezagrosze.pl/upload/l650/szafka-rtv-sewt142-m115-colonial-oak-black-colonial-oak-sewill-1.jpg',
       isFavourite: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -94,6 +97,7 @@ const initialState = {
       photoBackground: 'https://www.mirjan24.pl/83016/komoda-nowoczesna-empire.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -107,6 +111,7 @@ const initialState = {
         'https://meblini.pl/userdata/public/gfx/23421/Stolik-kawowy-lawa-2w1-okragly-industrialny-w-stylu-loft-Dab-Craft-Zloty.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -120,6 +125,7 @@ const initialState = {
         'https://www.strefasypialni.pl/userdata/public/gfx/5848/Lozko-Texas_90.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -133,6 +139,7 @@ const initialState = {
         'https://www.seart.pl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/w/i/witryna-industrial-2-seart-5.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -145,6 +152,7 @@ const initialState = {
       photoBackground: 'https://birdmeble.pl/userdata/public/gfx/4474.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -158,6 +166,7 @@ const initialState = {
         'https://a.allegroimg.com/original/038030/4e128be0469db48ff02ea169cb2a/PIKO-LAWA-STOLIK-KAWOWY-LOFT-RETRO-INDUSTRIALNY',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -171,6 +180,7 @@ const initialState = {
         'https://meblowy.salon/userdata/public/gfx/3152/Rozkladana-sofa-Corner-z-podnozkiem-niebieska.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -184,6 +194,7 @@ const initialState = {
         'https://3.allegroimg.com/s1024/0c7717/0cb014b14a218bcae20a9cad26d3',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -197,6 +208,7 @@ const initialState = {
         'https://www.ikea-club.org/cache/zoo_images/d/d8b2d6766a1f0a7c43be4cb92958dd32.jpg',
       isFavourite: false,
       compare: false,
+      topSeller: true,
     },
     {
       id: 'aenean-ru-bristique-13',
