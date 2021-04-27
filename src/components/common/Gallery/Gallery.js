@@ -170,7 +170,7 @@ const Gallery = ({
 };
 
 Gallery.propTypes = {
-  products: PropTypes.any,
+  products: PropTypes.object,
   activeCategorySales: PropTypes.string,
   addFavourite: PropTypes.func,
   addRating: PropTypes.func,

@@ -6,9 +6,11 @@ import styles from './FurnitureGallery.module.scss';
 import Gallery from '../../common/Gallery/Gallery';
 import Button from '../../common/Button/Button';
 
+const TOP_SELLER = 'top seller';
+
 export class FurnitureGallery extends Component {
   state = {
-    activeCategorySales: 'top seller',
+    activeCategorySales: TOP_SELLER,
   };
 
   render() {
@@ -20,7 +22,7 @@ export class FurnitureGallery extends Component {
 
     const featuredProducts = products.filter(product => {
       switch (activeCategorySales) {
-        case 'top seller': {
+        case TOP_SELLER: {
           return product.topSeller;
         }
         default:
