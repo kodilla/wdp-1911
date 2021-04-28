@@ -8,6 +8,8 @@ import PromoBox from '../../features/PromoBox/PromoBoxContainer';
 import Feedback from '../../layout/Feedback/FeedbackContainer';
 import BrandMarks from '../../features/BrandMarks/BrandMarks';
 
+import FurnitureGallery from './../../features/FurnitureGallery/FurnitureGalleryContainer';
+
 const Homepage = () => (
   <div className={styles.root}>
     <PromoBox />
@@ -15,6 +17,7 @@ const Homepage = () => (
     <NewFurniture />
     <BrandMarks />
     <Feedback />
+    <FurnitureGallery />
   </div>
 );
 

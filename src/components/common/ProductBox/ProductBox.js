@@ -38,12 +38,12 @@ const ProductBox = ({
   oldPrice,
   id,
   addFavourite,
-  addCompare,
-  removeCompare,
   isFavourite,
   compare,
   myRating,
   addRating,
+  addCompare,
+  removeCompare,
   canAddCompare,
 }) => (
   <div className={styles.root}>
@@ -132,13 +132,13 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   photoBackground: PropTypes.string,
   addFavourite: PropTypes.func,
-  addCompare: PropTypes.func,
-  removeCompare: PropTypes.func,
   id: PropTypes.string,
   isFavourite: PropTypes.bool,
   compare: PropTypes.bool,
   myRating: PropTypes.any,
   addRating: PropTypes.func,
+  addCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
   canAddCompare: PropTypes.bool,
 };
 
