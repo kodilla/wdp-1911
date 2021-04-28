@@ -10,6 +10,8 @@ class PromoBox extends React.Component {
     products: PropTypes.array,
     promoImages: PropTypes.array,
     addFavourite: PropTypes.func,
+    saleProducts: PropTypes.array,
+    promoProducts: PropTypes.array,
   };
 
   state = {
@@ -18,11 +20,9 @@ class PromoBox extends React.Component {
   };
 
   render() {
-    const { products } = this.props;
+    const { saleProducts, promoProducts } = this.props;
     const { activeProduct, activePromoImage } = this.state;
 
-    const saleProducts = products.filter(item => item.promo === 'sale');
-    const promoProducts = products.filter(item => item.promo === 'promo');
     const salesCount = saleProducts.length;
 
     const dots = [];

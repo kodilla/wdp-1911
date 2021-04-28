@@ -8,6 +8,12 @@ export const getNew = ({ products }) =>
 export const getProductsToCompare = ({ products }) =>
   products.filter(item => item.compare === true);
 
+export const saleProducts = ({ products }) =>
+  products.filter(item => item.promo === 'sale');
+
+export const promoProducts = ({ products }) =>
+  products.filter(item => item.promo === 'promo');
+
 /* function*/
 
 const addProductToFavourite = (state, action) => {
@@ -23,7 +29,6 @@ const addProductToFavourite = (state, action) => {
   });
 };
 
-
 const addMyRating = (state, action) => {
   return state.map(currentStateElement => {
     if (currentStateElement.id !== action.payload.id) {
@@ -33,7 +38,7 @@ const addMyRating = (state, action) => {
       ...currentStateElement,
       myRating: action.payload.myRating,
     };
-   });
+  });
 };
 
 const addProductToCompare = (state, action) => {
@@ -59,7 +64,6 @@ const removeProductFromCompare = (state, action) => {
         compare: false,
       };
     }
-
   });
 };
 /* action name creator */

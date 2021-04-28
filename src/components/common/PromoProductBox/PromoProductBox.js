@@ -25,12 +25,8 @@ const PromoProductBox = ({
   id,
 }) => (
   <div className={styles.root}>
-    <div
-      className={styles.photo}
-      style={{
-        backgroundImage: `url(${photoBackground})`,
-      }}
-    >
+    <div className={styles.photo}>
+      <img className={styles.image} src={photoBackground} alt={name} />
       <div className={styles.buttons}>
         <Button variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
@@ -51,6 +47,7 @@ const PromoProductBox = ({
         </div>
       </div>
     </div>
+
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
