@@ -1,0 +1,40 @@
+@import "../../../styles/settings.scss";
+
+.container {
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.dealsBigBox {
+  text-align: right;
+}
+
+.dealsSmallBox {
+  height: 100px;
+}
+
+.dealsBig {
+    flex-basis: 50%;
+}
+
+.photoBig {
+  display: inline;
+  width: 220px;
+  height: 180px;      
+  padding: 5px;
+}
+
+.dealsSmall {
+  flex-basis: 50%;
+}
+  
+.photoSmall {
+  width: 140px;
+  height: 100px;      
+  padding: 5px;
+}
+
+img:hover {
+  opacity: 0.6;
+}

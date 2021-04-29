@@ -51,6 +51,8 @@ const initialState = {
       myRating: 3,
       isFavourite: true,
       topSeller: true,
+      deals: true,
+      dealsSmallUp: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -635,6 +637,8 @@ const initialState = {
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/arviken-sofa-trzyosobowa-rozkladana-bezowy__0277586_pe416615_s5.jpg?f=xxss',
+      deals: true,
+      dealsSmallDown: true,
     },
     {
       id: 'Evertsberg-5',
@@ -725,6 +729,8 @@ const initialState = {
       newFurniture: true,
       photoBackground:
         'https://www.ikea.com/pl/pl/images/products/holmsund-naroznik-z-funkcja-spania-nordvalla-srednioszary__0829250_pe600302_s5.jpg?f=xxs',
+      deals: true,
+      dealsBig: true,
     },
     {
       id: 'Evertsberg-14',
